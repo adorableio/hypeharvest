@@ -53,11 +53,11 @@
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def portrait
+    image_tag lorem.image('120x120'), :class => "portrait"
+  end
+end
 
 # Change the CSS directory
 # set :css_dir, "alternative_css_directory"
