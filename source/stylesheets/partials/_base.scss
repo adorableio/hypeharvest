@@ -13,7 +13,7 @@
 
 body {
   @include bg($white);
-  @include text-shadow(0 1px 0 rgba(0,0,0,0.2));
+  @include text-shadow(0 1px 0 rgba(0,0,0,0.4));
 }
 
 .portrait {
@@ -36,10 +36,13 @@ body {
 .randall-thomas   { @include portrait("people/randall-thomas.jpg"); }
 
 .header { 
-  @include bg($green);
+  @include background-size(cover);
   @include white-text;
-  font-weight: 700;
-  padding-bottom: emCalc(20px);
+  background-image: image-url('header-bg.png');
+  background-position: center 80%;
+  // @include text-shadow(0 1px 0 rgba(0,0,0,0.8));
+  p { font-weight: 600; }
+
   h1 {
     @include background-size(contain);
     display: block;
@@ -52,7 +55,12 @@ body {
     margin-top: emCalc(10px);
     margin-bottom: emCalc(10px);
   }
+
   h2 { color: $white; }
+
+  .wrap {
+    @include bg(none);
+  }
 }
 
 
