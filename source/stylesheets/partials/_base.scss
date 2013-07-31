@@ -1,23 +1,45 @@
+@mixin bg($color) {
+  background-image: image-url('textured-paper.png');
+  background-color: $color;
+}
+
+@mixin white-text {
+  h1,h2,h3,h4,h5,p { color: $white; }
+}
+
 * {
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background-image: image-url('textured-paper.png');
+  @include bg($white);
   @include text-shadow(0 1px 0 rgba(0,0,0,0.2));
 }
 
 .portrait {
   @include border-radius(1000px);
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
 }
 
+@mixin portrait($image-url) {
+  a {
+    @extend .portrait;
+    @include background-size(cover);
+    margin: 0 auto;
+    display: block;
+    background-image: image-url($image-url);
+  }
+}
+
+.uncle-bob-martin { @include portrait("people/uncle-bob-martin.jpg"); }
+.randall-thomas   { @include portrait("people/randall-thomas.jpg"); }
+
 .header { 
-  background-color: $green;
-  background-image: image-url('textured-paper.png');
+  @include bg($green);
   color: $white;
   font-weight: 700;
+  padding-bottom: emCalc(20px);
   h1 {
     @include background-size(contain);
     display: block;
@@ -33,14 +55,20 @@ body {
   h2 { color: $white; }
 }
 
+
+.extra {
+  @include bg($white);
+  // @include white-text;
+  .vcard { border: none; }
+}
+
 .musical-guests {
+  @include bg($black);
+  @include white-text;
 }
 
 .speakers {
-  background-color: $blue;
-  h1, h2, p { color: $white; }
+  @include bg($white);
+  // h1, h2, p { color: $white; }
 }
 
-.extra {
-  
-}

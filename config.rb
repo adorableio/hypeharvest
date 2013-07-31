@@ -1,7 +1,7 @@
 ### 
 # Compass
 ###
-
+require 'digest/md5'
 require "zurb-foundation"
 
 # Susy grids in Compass
@@ -58,6 +58,11 @@ require "zurb-foundation"
 helpers do
   def portrait
     image_tag lorem.image('300x300'), :class => "portrait"
+  end
+
+  def gravatar_url_for(email, size=300)
+    hash = Digest::MD5.hexdigest(email)
+    image_tag "http://gravatar.com/avatar/#{hash}?s=#{size}", :class => "portrait"
   end
 end
 
