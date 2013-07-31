@@ -2,6 +2,8 @@
 # Compass
 ###
 
+require "zurb-foundation"
+
 # Susy grids in Compass
 # First: gem install compass-susy-plugin
 # require 'susy'
@@ -55,7 +57,7 @@
 # Methods defined in the helpers block are available in templates
 helpers do
   def portrait
-    image_tag lorem.image('120x120'), :class => "portrait"
+    image_tag lorem.image('300x300'), :class => "portrait"
   end
 end
 
@@ -69,7 +71,7 @@ end
 # set :images_dir, "alternative_image_directory"
 
 # Build-specific configuration
-configure :build do
+# configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css
   
@@ -89,4 +91,4 @@ configure :build do
   
   # Or use a different image path
   # set :http_path, "/Content/images/"
-end
+# end

@@ -5,25 +5,46 @@
 
 .header
   .row
-    .content
-      %h1 Header
+    .content-centered
+      %h1 #HYPEHARVEST
+      %p
+        The conference has grown a reputation for being one of the best around and as such people just want to be involved. We've built a great event and are now harvesting some of the hype that surrounds our event. In traditional Madison Ruby Style it's not all tech it includes music and local speakers.
+      %p
+        Storytelling without slides under the darkening sky.
 
-.set-list
+.musical-guests
   .row
-    .content
-      %h1 Set List
-      - 5.times do
-        .row
-          .small-12.large-6.columns
-            =portrait
-            Test (left)
-        .row
-          .small-12.large-6.push-6.columns
-            =portrait
-            Test (right)
+    .content-centered
+      %h1 Musical Guests
+      .row
+        .small-12.large-6.columns
+          =image_tag "https://si0.twimg.com/profile_images/3768950761/269869bb67e2e4b0877a19e64d23b467.jpeg", :class => "portrait"
+          %h2 F.Stokes
+        .small-12.large-6.columns
+          =image_tag "https://sphotos-a-iad.xx.fbcdn.net/hphotos-ash4/485396_629244867087578_1619343233_n.jpg", :class => "portrait"
+          %h2 DJ Radish
 
+.speakers
+  .row
+    .content-centered
+      %h1 Speakers
+      %ul.small-block-grid-1.large-block-grid-2
+        - 5.times do
+          %li
+            =portrait
+            %h2 Lorem Ipsum
+          %li
+            =portrait
+            %h2 Dolor Sit
 
 .extra
   .row
-    .content
-      %h1 Extra
+    .content-centered
+      %h1 Where
+      %ul.vcard
+        %li.fn Madison Museum of Contemporary Art
+        %li.street-address 227 State St
+        %li.locality Rooftop
+        %li.state
+          %span.state Madison, WI
+          %span.zip 53703
