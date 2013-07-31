@@ -37,7 +37,7 @@ body {
 
 .header { 
   @include bg($green);
-  color: $white;
+  @include white-text;
   font-weight: 700;
   padding-bottom: emCalc(20px);
   h1 {
@@ -58,7 +58,6 @@ body {
 
 .extra {
   @include bg($white);
-  // @include white-text;
   .vcard { border: none; }
 }
 
@@ -69,6 +68,5 @@ body {
 
 .speakers {
   @include bg($white);
-  // h1, h2, p { color: $white; }
 }
 
