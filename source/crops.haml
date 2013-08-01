@@ -11,40 +11,116 @@
         %h2
           Storytelling without slides under the darkening sky
         %p
-          The conference has grown a reputation for being one of the best around and as such people just want to be involved. We've built a great event and are now harvesting some of the hype that surrounds our event. In traditional Madison Ruby Style it's not all tech it includes music and local speakers.
-
+          The conference has grown a reputation for being <a href="https://twitter.com/steveklabnik/status/361624150286155777">one of the best around</a> and as such people just want to be involved. We've built a great event and are now harvesting some of the hype that surrounds our event. In traditional Madison Ruby Style it's not all tech it includes music and local speakers.
+    .row
+      .content-centered
+        %ul.small-block-grid-3
+          %li twitter
+          %li something
+          %li something-else
 .extra
   .row
     .content-centered
       %h1 Where
-      %ul.vcard
-        %li.fn Madison Museum of Contemporary Art
-        %li.street-address 227 State St
-        %li.locality Rooftop
-        %li.state
-          %span.state Madison, WI
-          %span.zip 53703
+      .row
+        .small-12.large-6.columns
+          %a(href="https://www.google.com/maps/preview#!q=Madison+Museum+of+Contemporary+Art&data=!1m4!1m3!1d16728!2d-89.3894003!3d43.0746915!4m10!1m9!4m8!1m3!1d4015!2d-89.388957!3d43.0746771!3m2!1i991!2i1058!4f13.1")=image_tag "map.jpg", :class => "map"
+        .small-12.large-6.columns
+          %ul.vcard
+            %li.fn Madison Museum of Contemporary Art
+            %li.street-address 227 State St
+            %li.locality Rooftop
+            %li.state
+              %span.state Madison, WI
+              %span.zip 53703
+            %li.action
+              %a.button.radius.expand(href="https://www.google.com/maps/preview#!q=Madison+Museum+of+Contemporary+Art&data=!1m4!1m3!1d16728!2d-89.3894003!3d43.0746915!4m10!1m9!4m8!1m3!1d4015!2d-89.388957!3d43.0746771!3m2!1i991!2i1058!4f13.1") Get Directions!
 
 .musical-guests
   .row
     .content-centered
       %h1 Musical Guests
-      .row
-        .small-12.large-6.columns
-          =image_tag "https://si0.twimg.com/profile_images/3768950761/269869bb67e2e4b0877a19e64d23b467.jpeg", :class => "portrait"
+      %ul.small-block-grid-2
+        %li.f-stokes
+          %a(href="#")
+            .overlay
+              .text
+                Lorem,<br/>
+                Ipsum.
           %h2 F.Stokes
-        .small-12.large-6.columns
-          =image_tag "https://sphotos-a-iad.xx.fbcdn.net/hphotos-ash4/485396_629244867087578_1619343233_n.jpg", :class => "portrait"
+          %p
+            %a(href="https://twitter.com/fdotstokes") @fdotstokes
+        %li.dj-radish
+          %a(href="#")
+            .overlay
+              .text
+                Lorem,<br/>
+                Ipsum.
           %h2 DJ Radish
+          %p
+            %a(href="https://twitter.com/djradish") @djradish
 
 .speakers
   .row
     .content-centered
       %h1 Speakers
-      %ul.small-block-grid-1.large-block-grid-2
+      %ul.small-block-grid-2.large-block-grid-3
         %li.uncle-bob-martin
           %a(href="#")
+            .overlay
+              .text
+                Hello,<br/>
+                How are you doing?
           %h2 Uncle Bob Martin
+          %p
+            %a(href="https://twitter.com/unclebobmartin") @unclebobmartin
         %li.randall-thomas
           %a(href="#")
+            .overlay
+              .text
+                Hello,<br/>
+                I do things.
           %h2 Randall Thomas
+          %p
+            %a(href="https://twitter.com/daksis") @daksis
+        %li.ashe-dryden
+          %a(href="#")
+            .overlay
+              .text
+                Lorem,<br/>
+                Ipsum.
+          %h2 Ashe Dryden
+          %p
+            %a(href="https://twitter.com/ashedryden") @ashedryden
+        %li.shane-becker
+          %a(href="#")
+            .overlay
+              .text
+                Lorem,<br/>
+                Ipsum.
+          %h2 Shane Becker
+          %p
+            %a(href="https://twitter.com/veganstraightedge") @veganstraightedge
+        %li.gregg-baugues
+          %a(href="#")
+            .overlay
+              .text
+                Lorem,<br/>
+                Ipsum.
+          %h2 Gregg Baugues
+          %p
+            %a(href="https://twitter.com/greggyb") @greggyb
+        %li.blithe-rocher
+          %a(href="#")
+            .overlay
+              .text
+                Lorem,<br/>
+                Ipsum.
+          %h2 Blithe Rocher
+          %p
+            %a(href="https://twitter.com/blithe") @blithe
+
+.footer
+  .row
+    .content
+      %p This is footer stuff
