@@ -40,7 +40,7 @@
     .overlay {
       @extend .portrait;
       @include transition-property(opacity);
-      @include transition-duration(.4s);
+      @include transition-duration(.3s);
       background: rgba(228, 45, 76,.8);
       color: $white;
       font-weight: 600;
@@ -52,13 +52,17 @@
       padding-bottom: emCalc(20px);
       padding-left: emCalc(20px);
       .text {
-        @include transition-property(margin);
+        @include transition-property(all);
         @include transition-duration(.4s);
         margin-top: emCalc(-10px);
+        opacity: 0
       }
       &:hover {
         opacity: 1;
-        .text { margin-top: 0; }
+        .text {
+          margin-top: 0;
+          opacity: 1;
+        }
       }
     }
   }
