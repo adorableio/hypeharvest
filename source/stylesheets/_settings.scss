@@ -165,8 +165,8 @@ $header-font-family: "arvil", "Helvetica Neue", "Helvetica", Helvetica, Arial, s
 // $header-font-style: normal;
 $header-font-color: $black;
 // $header-line-height: 1.4;
-// $header-top-margin: .2em;
-// $header-bottom-margin: .5em;
+$header-top-margin: .5em;
+$header-bottom-margin: .2em;
 $header-text-rendering: optimizeLegibility;
 
 // Control header font sizes
