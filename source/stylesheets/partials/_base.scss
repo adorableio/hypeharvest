@@ -9,6 +9,10 @@
   &,h1,h2,h3,h4,h5,p { color: $white; }
 }
 
+%pad {
+  .row { padding-bottom: emCalc(20px); }
+}
+
 .portrait {
   @include border-radius(1000px);
   height: 140px;
@@ -118,10 +122,6 @@ body {
   .wrap {
     @include bg(none);
   }
-}
-
-%pad {
-  .row { padding-bottom: emCalc(20px); }
 }
 
 .extra {
