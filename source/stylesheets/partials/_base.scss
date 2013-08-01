@@ -72,7 +72,7 @@
 body {
   @include bg($white);
   @include text-shadow(0 1px 0 rgba(0,0,0,0.4));
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100%;
 }
 
