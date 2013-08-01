@@ -19,53 +19,53 @@ August 22, 2013 7-11pm
 
 ### Musical Guests
 
-- F Stokes
+- **F Stokes**
   - **Twitter**: [@fdotstokes](https://twitter.com/fdotstokes)
   - **Website**: 
   - **Bio**:  
-- DJ Radish
+- **DJ Radish**
   - **Twitter**: [@djradish](https://twitter.com/djradish)
   - **Website**: 
   - **Bio**: 
 
 ### Speakers
 
-- Uncle Bob Martin
+- **Uncle Bob Martin**
   - **Twitter**: [@unclebobmartin](https://twitter.com/unclebobmartin)
   - **"Title"**: 
   - **Company**: 
   - **Company** URL:
   - **Personal Website / Blog**:
   - **Bio**: 
-- Randall Thomas
+- **Randall Thomas**
   - **Twitter**: [@daksis](https://twitter.com/daksis)
   - **"Title"**: 
   - **Company**: 
   - **Company** URL:
   - **Personal Website / Blog**:
   - **Bio**: 
-- Ashe Dryden
+- **Ashe Dryden**
   - **Twitter**: [@ashedryden](https://twitter.com/ashedryden)
   - **"Title"**: 
   - **Company**: 
   - **Company** URL:
   - **Personal Website / Blog**:
   - **Bio**: 
-- Shane Becker
+- **Shane Becker**
   - **Twitter**: [@veganstraightedge](https://twitter.com/veganstraightedge)
   - **"Title"**: 
   - **Company**: 
   - **Company** URL:
   - **Personal Website / Blog**:
   - **Bio**: 
-- Gregg Baugues
+- **Gregg Baugues**
   - **Twitter**: [@greggyb](https://twitter.com/greggyb)
   - **"Title"**: 
   - **Company**: 
   - **Company** URL:
   - **Personal Website / Blog**:
   - **Bio**: 
-- Blithe Rocher
+- **Blithe Rocher**
   - **Twitter**: [@blithe](https://twitter.com/blithe)
   - **Company**: Big Nerd Ranch
   - **Company** URL: http://www.bignerdranch.com
