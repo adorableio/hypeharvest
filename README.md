@@ -21,10 +21,12 @@ August 22, 2013 7-11pm
 
 - F Stokes
   - **Twitter**: [@fdotstokes](https://twitter.com/fdotstokes)
+  - **Portrait URL**: 
   - **Website**: 
   - **Bio**:  
 - DJ Radish
   - **Twitter**: [@djradish](https://twitter.com/djradish)
+  - **Portrait URL**: 
   - **Website**: 
   - **Bio**: 
 
