@@ -75,6 +75,7 @@ August 22, 2013 7-11pm
 - Blithe Rocher
   - **Twitter**: [@blithe](https://twitter.com/blithe)
   - **Portrait URL**: https://sapling.wufoo.com/cabinet/q7p7w1/QIJqA75r81Y%3D/blitheportraittilt2013.jpg
+  - **"Title"**:
   - **Company**: Big Nerd Ranch
   - **Company URL**: http://www.bignerdranch.com
   - **Personal Website / Blog**: http://www.blitherocher.com
