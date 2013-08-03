@@ -8,10 +8,10 @@ Storytelling without slides under the darkening sky.
 
 ### Where
 
-	Madison Museum of Contemporary Art
-	227 State St
-	Rooftop
-	Madison, WI, 53703
+  Madison Museum of Contemporary Art
+  227 State St
+  Rooftop
+  Madison, WI, 53703
 
 ### When
 
@@ -20,16 +20,66 @@ August 22, 2013 7-11pm
 ### Musical Guests
 
 - F Stokes
+  - **Twitter**: [@fdotstokes](https://twitter.com/fdotstokes)
+  - **Portrait URL**: 
+  - **Website**: 
+  - **Bio**:  
 - DJ Radish
+  - **Twitter**: [@djradish](https://twitter.com/djradish)
+  - **Portrait URL**: 
+  - **Website**: 
+  - **Bio**: 
 
 ### Speakers
 
 - Uncle Bob Martin
+  - **Twitter**: [@unclebobmartin](https://twitter.com/unclebobmartin)
+  - **Portrait URL**: 
+  - **"Title"**: 
+  - **Company**: 
+  - **Company URL**:
+  - **Personal Website / Blog**:
+  - **Bio**: 
 - Randall Thomas
+  - **Twitter**: [@daksis](https://twitter.com/daksis)
+  - **Portrait URL**: 
+  - **"Title"**: 
+  - **Company**: 
+  - **Company URL**:
+  - **Personal Website / Blog**:
+  - **Bio**: 
 - Ashe Dryden
+  - **Twitter**: [@ashedryden](https://twitter.com/ashedryden)
+  - **Portrait URL**: 
+  - **"Title"**: 
+  - **Company**: 
+  - **Company URL**:
+  - **Personal Website / Blog**:
+  - **Bio**: 
 - Shane Becker
+  - **Twitter**: [@veganstraightedge](https://twitter.com/veganstraightedge)
+  - **Portrait URL**: 
+  - **"Title"**: 
+  - **Company**: 
+  - **Company URL**:
+  - **Personal Website / Blog**:
+  - **Bio**: 
 - Gregg Baugues
+  - **Twitter**: [@greggyb](https://twitter.com/greggyb)
+  - **Portrait URL**: 
+  - **"Title"**: 
+  - **Company**: 
+  - **Company URL**:
+  - **Personal Website / Blog**:
+  - **Bio**: 
 - Blithe Rocher
+  - **Twitter**: [@blithe](https://twitter.com/blithe)
+  - **Portrait URL**: https://sapling.wufoo.com/cabinet/q7p7w1/QIJqA75r81Y%3D/blitheportraittilt2013.jpg
+  - **"Title"**:
+  - **Company**: Big Nerd Ranch
+  - **Company URL**: http://www.bignerdranch.com
+  - **Personal Website / Blog**: http://www.blitherocher.com
+  - **Bio**: Blithe has a PhD in physical chemistry but changed careers to become a web developer at Big Nerd Ranch in Atlanta. Over the past year, Blithe has grown from RailsGirls participant to coach. She helps organize a monthly meetup for women interested in continuing to learn about Ruby on Rails. When she’s not crafting web applications or teaching new developers, she spends time traveling, riding her bike, or with her dog Nola.
 
 ### Tech Stack
 
