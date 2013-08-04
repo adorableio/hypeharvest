@@ -87,16 +87,12 @@ body {
 a {
   @include transition-property(all);
   @include transition-duration(.2s);
-}
 
-.f-stokes         { @include portrait("f-stokes.jpg"); }
-.dj-radish        { @include portrait("dj-radish.jpg"); }
-.uncle-bob-martin { @include portrait("uncle-bob-martin.jpg"); }
-.randall-thomas   { @include portrait("randall-thomas.jpg"); }
-.ashe-dryden      { @include portrait("ashe-dryden.jpg"); }
-.shane-becker     { @include portrait("shane-becker.png"); }
-.gregg-baugues    { @include portrait("gregg-baugues.jpg"); }
-.blithe-rocher    { @include portrait("blithe-rocher.jpg"); }
+  &.collapse {
+    font-size: .8em;
+    @media #{$small} { font-size: 1em; }
+  }
+}
 
 .header {
   @extend %pad;
@@ -104,6 +100,8 @@ a {
   @extend %white-text;
   background-image: image-url('header-bg.png');
   background-position: center 80%;
+
+  .wrap { @include bg(none); }
   
   a {
     color: $light-green;
@@ -124,77 +122,18 @@ a {
     margin-bottom: emCalc(10px);
   }
 
-  h2 {
-    color: $white;
-  }
+  h2 { color: $white; }
 
-  .wrap {
-    @include bg(none);
-  }
-}
+  li {
+    a {
+      @include transition-property(all);
+      @include transition-duration(.2s);
+    }
 
-@mixin icon-image($url) {
-  &:before {
-    @include inline-block;
-    background-image: image-url($url);
-    content: "";
-    width: 16px;
-    height: 16px;
-    left: -5px;
-    top: -2px;
-    position: relative;
-  }
-}
-
-.ruby a {
-  @include icon-image('ruby.png');
-}
-
-.extra {
-  @include bg($white);
-  @extend %pad;
-
-  .vcard {
-    text-align: left;
-    border: none;
-
-    .action { margin-top: emCalc(12px); }
-  }
-
-  .map {
-    @include box-shadow(0 2px 3px rgba(0,0,0, .26));
-    border: 5px solid $white;
-  }
-}
-
-.musical-guests {
-  @extend %pad;
-  @include bg($black);
-  @extend %white-text;
-}
-
-.speakers {
-  @extend %pad;
-  @include bg($white);
-}
-
-.footer {
-  @extend %pad;
-  @extend %white-text;
-  @include bg($green);
-}
-
-
-.header li {
-
-  a {
-    @include transition-property(all);
-    @include transition-duration(.2s);
-  }
-
-  &:hover a {
-    color: lighten($light-green, 20%);
-    opacity: 1;
+    &:hover a {
+      color: lighten($light-green, 20%);
+      opacity: 1;
+    }
   }
 }
 
@@ -219,12 +158,50 @@ a {
     margin: 0;
   }
 }
-.icon-twitter:before {
-  content: "\e000";
+
+.icon-twitter:before { content: "\e000"; }
+.icon-leaf:before { content: "\e001"; }
+.icon-ruby:before { content: "\e002"; }
+
+.extra {
+  @include bg($white);
+  @extend %pad;
+
+  .vcard {
+    text-align: left;
+    border: none;
+
+    .action { margin-top: emCalc(12px); }
+  }
+
+  .map {
+    @include box-shadow(0 2px 3px rgba(0,0,0, .26));
+    border: 5px solid $white;
+  }
 }
-.icon-leaf:before {
-  content: "\e001";
+
+.f-stokes         { @include portrait("f-stokes.jpg"); }
+.dj-radish        { @include portrait("dj-radish.jpg"); }
+.uncle-bob-martin { @include portrait("uncle-bob-martin.jpg"); }
+.randall-thomas   { @include portrait("randall-thomas.jpg"); }
+.ashe-dryden      { @include portrait("ashe-dryden.jpg"); }
+.shane-becker     { @include portrait("shane-becker.png"); }
+.gregg-baugues    { @include portrait("gregg-baugues.jpg"); }
+.blithe-rocher    { @include portrait("blithe-rocher.jpg"); }
+
+.musical-guests {
+  @extend %pad;
+  @include bg($black);
+  @extend %white-text;
 }
-.icon-ruby:before {
-  content: "\e002";
+
+.speakers {
+  @extend %pad;
+  @include bg($white);
+}
+
+.footer {
+  @extend %pad;
+  @extend %white-text;
+  @include bg($green);
 }
