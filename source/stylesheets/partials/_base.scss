@@ -181,7 +181,7 @@ a {
 
   .map {
     @include box-shadow(0 2px 3px rgba(0,0,0, .26));
-    border: 5px solid $white;
+    border: 2px solid $white;
   }
 }
 
