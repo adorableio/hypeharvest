@@ -35,7 +35,7 @@
     cursor: default;
     margin: 0 auto;
     display: block;
-    background-image: image-url("people/#{$image-url}");
+    background-image: image-url("#{$image-url}");
 
     .overlay {
       @extend .portrait;
@@ -185,17 +185,8 @@ a {
   }
 }
 
-// musical guests portraits
-.musical-guest-1 { @include portrait("musical-guest-1.jpg"); }
-.musical-guest-2 { @include portrait("musical-guest-2.jpg"); }
-
-// speakers portraits
-.speaker-1 { @include portrait("speaker-1.jpg"); }
-.speaker-2 { @include portrait("speaker-2.jpg"); }
-.speaker-3 { @include portrait("speaker-3.jpg"); }
-.speaker-4 { @include portrait("speaker-4.png"); }
-.speaker-5 { @include portrait("speaker-5.jpg"); }
-.speaker-6 { @include portrait("speaker-6.jpg"); }
+//
+.locked { @include portrait("locked.png"); }
 
 .musical-guests {
   @extend %pad;
