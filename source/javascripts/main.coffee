@@ -2,6 +2,14 @@
 class Main
   constructor: ->
     $('li').find('a:first').click (event) ->
-      event.preventDefault() if $(this).parents('.header').length < 1
+      event.preventDefault() if $(this).parents('.break').length > 0
+
+    $(document).foundation {
+      index : 0,
+      stickyClass : 'sticky',
+      custom_back_text: true,
+      back_text: 'Back',
+      init : true
+    }
 
 window.main = new Main()

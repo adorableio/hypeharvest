@@ -88,8 +88,9 @@ a {
   @include transition-property(all);
   @include transition-duration(.2s);
 
-  &.collapse {
-    font-size: .8em;
+  &.collapse,
+  .collapse {
+    font-size: .74em;
     @media #{$small} { font-size: 1em; }
   }
 }
@@ -163,7 +164,11 @@ a {
 .icon-leaf:before { content: "\e001"; }
 .icon-ruby:before { content: "\e002"; }
 
-.extra {
+#where,
+#music,
+#speakers { padding-top: 20px; margin-top: -20px; }
+
+.where {
   @include bg($white);
   @extend %pad;
 
@@ -192,7 +197,7 @@ a {
 }
 
 .footer {
-  @extend %pad;
   @extend %white-text;
   @include bg($green);
+  padding-top: 1em;
 }

@@ -1,24 +1,50 @@
 - content_for :head do
   %title #HYPEHARVEST
 
-
-
+.sticky
+  .top-bar
+    %ul.title-area
+      %li.name
+        %h1
+          %a(href="/#") #HYPEHARVEST
+      %li.toggle-topbar.menu-icon
+        %a(href="#" data-type='mixpanel' data-id="menu-button" data-name="Header: Toggle Menu" data-redirect="false")
+          %span Menu
+    %section.top-bar-section
+      %ul.right
+        %li
+          %a(href="#where") Where
+        %li
+          %a(href="#music") Music
+        %li
+          %a(href="#speakers") Speakers
+        %li.has-form
+          %a.button.radius(href="http://www.indiegogo.com/projects/nairobi-dev-school?c=pledges")
+            Donate
 .header
   .wrap
     .row
       .content-centered
         %h1 #HYPEHARVEST
-        %h2
-          Storytelling without slides under the darkening sky
         %p
-          <a href="http://madisonruby.org">Madison Ruby</a> has grown a reputation for being <a href="https://twitter.com/steveklabnik/status/361624150286155777">one of the best regional conferences around</a> and as such people just want to be involved. We've built a great event and are now harvesting some of the hype that surrounds our event. In usuaul <a href="http://saplingevents.com/">Sapling Events</a> style it's not all tech it includes music and local speakers.
+          <a href="http://madisonruby.org">Madison Ruby</a> has grown a reputation for being <a href="https://twitter.com/steveklabnik/status/361624150286155777">one of the best regional conferences around</a> and as such people just want to be involved. We've built a great event and are now harvesting some of the hype that surrounds it. In usual <a href="http://saplingevents.com/">Sapling Events</a> style it's ... well, you'll see.
     .row
       .content-centered
         %ul.small-block-grid-3
-          %li twitter
-          %li something
-          %li something-else
-.extra
+          %li
+            %a(href="http://www.madisonruby.org/")
+              %i.icon-ruby
+              %span.collapse Madison Ruby Conference
+          %li
+            %a(href="http://www.saplingevents.com/")
+              %i.icon-leaf
+              %span.collapse Sapling Events
+          %li
+            %a(href="https://twitter.com/search?q=%23HYPEHARVEST%20OR%20%23whatishypeharvest&src=typd")
+              %i.icon-twitter
+              %span.collapse #HYPEHARVEST on Twitter
+#where
+.where
   .row
     .content-centered
       %h1 Where
@@ -39,7 +65,8 @@
             %li.action
               %a.button.radius.expand(href="https://www.google.com/maps/preview#!q=Madison+Museum+of+Contemporary+Art&data=!1m4!1m3!1d16728!2d-89.3894003!3d43.0746915!4m10!1m9!4m8!1m3!1d4015!2d-89.388957!3d43.0746771!3m2!1i991!2i1058!4f13.1") Get Directions!
 
-.musical-guests
+#music
+.musical-guests.break
   .row
     .content-centered
       %h1 Musical Guests
@@ -66,7 +93,8 @@
           %p
             %a.collapse(href="https://twitter.com/djradish") @djradish
 
-.speakers
+#speakers
+.speakers.break
   .row
     .content-centered
       %h1 Speakers
@@ -131,5 +159,5 @@
 
 .footer
   .row
-    .content
+    .content-centered
       %p This is footer stuff
