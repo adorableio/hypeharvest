@@ -185,14 +185,17 @@ a {
   }
 }
 
-.f-stokes         { @include portrait("f-stokes.jpg"); }
-.dj-radish        { @include portrait("dj-radish.jpg"); }
-.uncle-bob-martin { @include portrait("uncle-bob-martin.jpg"); }
-.randall-thomas   { @include portrait("randall-thomas.jpg"); }
-.ashe-dryden      { @include portrait("ashe-dryden.jpg"); }
-.shane-becker     { @include portrait("shane-becker.png"); }
-.gregg-baugues    { @include portrait("gregg-baugues.jpg"); }
-.blithe-rocher    { @include portrait("blithe-rocher.jpg"); }
+// musical guests portraits
+.f-stokes  { @include portrait("f-stokes.jpg"); }
+.dj-radish { @include portrait("dj-radish.jpg"); }
+
+// speakers portraits
+.speaker-1 { @include portrait("speaker-1.jpg"); }
+.speaker-2 { @include portrait("speaker-2.jpg"); }
+.speaker-3 { @include portrait("speaker-3.jpg"); }
+.speaker-4 { @include portrait("speaker-4.png"); }
+.speaker-5 { @include portrait("speaker-5.jpg"); }
+.speaker-6 { @include portrait("speaker-6.jpg"); }
 
 .musical-guests {
   @extend %pad;
