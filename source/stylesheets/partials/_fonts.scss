@@ -19,27 +19,3 @@
   font-weight: normal;
   font-style: normal;
 }
-
-.icon-twitter,
-.icon-leaf,
-.icon-ruby {
-  // color: $light-green;
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  opacity: .5;
-}
-.icon-twitter:before {
-  content: "\e000";
-}
-.icon-leaf:before {
-  content: "\e001";
-}
-.icon-ruby:before {
-  content: "\e002";
-}

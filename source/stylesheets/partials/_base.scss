@@ -186,8 +186,6 @@ a {
 
 
 .header li {
-  
-
 
   a {
     @include transition-property(all);
@@ -198,4 +196,35 @@ a {
     color: lighten($light-green, 20%);
     opacity: 1;
   }
+}
+
+.icon-twitter,
+.icon-leaf,
+.icon-ruby {
+  display: block;
+  font-family: 'icomoon';
+  speak: none;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  margin-bottom: 6px;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  opacity: .5;
+  @media #{$small} {
+    @include inline-block;
+    font-size: 1em;
+    margin: 0;
+  }
+}
+.icon-twitter:before {
+  content: "\e000";
+}
+.icon-leaf:before {
+  content: "\e001";
+}
+.icon-ruby:before {
+  content: "\e002";
 }
