@@ -84,6 +84,11 @@ body {
   width: 100%;
 }
 
+a {
+  @include transition-property(all);
+  @include transition-duration(.2s);
+}
+
 .f-stokes         { @include portrait("f-stokes.jpg"); }
 .dj-radish        { @include portrait("dj-radish.jpg"); }
 .uncle-bob-martin { @include portrait("uncle-bob-martin.jpg"); }
@@ -128,6 +133,23 @@ body {
   }
 }
 
+@mixin icon-image($url) {
+  &:before {
+    @include inline-block;
+    background-image: image-url($url);
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: -5px;
+    top: -2px;
+    position: relative;
+  }
+}
+
+.ruby a {
+  @include icon-image('ruby.png');
+}
+
 .extra {
   @include bg($white);
   @extend %pad;
@@ -160,4 +182,20 @@ body {
   @extend %pad;
   @extend %white-text;
   @include bg($green);
+}
+
+
+.header li {
+  
+
+
+  a {
+    @include transition-property(all);
+    @include transition-duration(.2s);
+  }
+
+  &:hover a {
+    color: lighten($light-green, 20%);
+    opacity: 1;
+  }
 }
