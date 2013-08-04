@@ -202,7 +202,8 @@ a {
 }
 
 .footer {
-  @extend %pad;
+  // @extend %pad;
   @extend %white-text;
+  padding-top: 1em;
   @include bg($green);
 }
