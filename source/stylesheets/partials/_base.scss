@@ -104,9 +104,7 @@ a {
 
   .wrap { @include bg(none); }
   
-  a {
-    color: $light-green;
-  }
+  a { color: $light-green; }
 
   p { font-weight: 600; }
 
@@ -203,4 +201,6 @@ a {
   @extend %white-text;
   @include bg($green);
   padding-top: 1em;
+
+  a { color: $light-green; }
 }
