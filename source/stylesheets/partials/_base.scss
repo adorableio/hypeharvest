@@ -54,13 +54,14 @@
       .text {
         @include transition-property(all);
         @include transition-duration(.4s);
-        margin-top: emCalc(-10px);
-        opacity: 0
+        margin-top: emCalc(-20px);
+        opacity: 0;
+        height: 100%;
       }
       &:hover {
         opacity: 1;
         .text {
-          margin-top: 0;
+          margin-top: emCalc(10px);
           opacity: 1;
         }
       }
