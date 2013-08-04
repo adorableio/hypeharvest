@@ -1234,12 +1234,12 @@ $h3-font-size: emCalc(27);
 
 // Background color for the top bar
 
-// $topbar-bg: #111;
+$topbar-bg: $black;
 
 // Height and margin
 
 // $topbar-height: 45px;
-// $topbar-margin-bottom: emCalc(30);
+$topbar-margin-bottom: 0;
 
 // Control Input height for top bar
 
@@ -1252,7 +1252,7 @@ $h3-font-size: emCalc(27);
 
 // Style the top bar dropdown elements
 
-// $topbar-dropdown-bg: #222;
+$topbar-dropdown-bg: $black;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
 // $topbar-dropdown-toggle-size: 5px;

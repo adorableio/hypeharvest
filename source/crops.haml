@@ -1,8 +1,26 @@
 - content_for :head do
   %title #HYPEHARVEST
 
-
-
+.sticky
+  .top-bar
+    %ul.title-area
+      %li.name
+        %h1
+          %a(href="/#") #HYPEHARVEST
+      %li.toggle-topbar.menu-icon
+        %a(href="#" data-type='mixpanel' data-id="menu-button" data-name="Header: Toggle Menu" data-redirect="false")
+          %span Menu
+    %section.top-bar-section
+      %ul.right
+        %li
+          %a(href="#where") Where
+        %li
+          %a(href="#music") Music
+        %li
+          %a(href="#speakers") Speakers
+        %li.has-form
+          %a.button.radius(href="http://www.indiegogo.com/projects/nairobi-dev-school?c=pledges")
+            Donate
 .header
   .wrap
     .row
@@ -18,7 +36,8 @@
           %li twitter
           %li something
           %li something-else
-.extra
+#where
+.where
   .row
     .content-centered
       %h1 Where
@@ -39,7 +58,8 @@
             %li.action
               %a.button.radius.expand(href="https://www.google.com/maps/preview#!q=Madison+Museum+of+Contemporary+Art&data=!1m4!1m3!1d16728!2d-89.3894003!3d43.0746915!4m10!1m9!4m8!1m3!1d4015!2d-89.388957!3d43.0746771!3m2!1i991!2i1058!4f13.1") Get Directions!
 
-.musical-guests
+#music
+.musical-guests.break
   .row
     .content-centered
       %h1 Musical Guests
@@ -66,7 +86,8 @@
           %p
             %a.collapse(href="https://twitter.com/djradish") @djradish
 
-.speakers
+#speakers
+.speakers.break
   .row
     .content-centered
       %h1 Speakers
