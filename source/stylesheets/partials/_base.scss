@@ -186,8 +186,8 @@ a {
 }
 
 // musical guests portraits
-.f-stokes  { @include portrait("f-stokes.jpg"); }
-.dj-radish { @include portrait("dj-radish.jpg"); }
+.musical-guest-1 { @include portrait("musical-guest-1.jpg"); }
+.musical-guest-2 { @include portrait("musical-guest-2.jpg"); }
 
 // speakers portraits
 .speaker-1 { @include portrait("speaker-1.jpg"); }

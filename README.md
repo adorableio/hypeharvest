@@ -24,11 +24,13 @@ August 22, 2013 7-11pm
   - **Portrait URL**: 
   - **Website**: 
   - **Bio**:  
+  - **Portait Text** 
 - DJ Radish
   - **Twitter**: [@djradish](https://twitter.com/djradish)
   - **Portrait URL**: 
   - **Website**: 
   - **Bio**: 
+  - **Portait Text** 
 
 ### Speakers
 
@@ -40,6 +42,7 @@ August 22, 2013 7-11pm
   - **Company URL**:
   - **Personal Website / Blog**:
   - **Bio**: 
+  - **Portait Text** Uncle Bob
 - Randall Thomas
   - **Twitter**: [@daksis](https://twitter.com/daksis)
   - **Portrait URL**: 
@@ -48,6 +51,7 @@ August 22, 2013 7-11pm
   - **Company URL**:
   - **Personal Website / Blog**:
   - **Bio**: 
+  - **Portait Text** The Drinker
 - Ashe Dryden
   - **Twitter**: [@ashedryden](https://twitter.com/ashedryden)
   - **Portrait URL**: 
@@ -56,6 +60,7 @@ August 22, 2013 7-11pm
   - **Company URL**:
   - **Personal Website / Blog**:
   - **Bio**: 
+  - **Portait Text** Diversity Advocate
 - Shane Becker
   - **Twitter**: [@veganstraightedge](https://twitter.com/veganstraightedge)
   - **Portrait URL**: 
@@ -64,6 +69,7 @@ August 22, 2013 7-11pm
   - **Company URL**:
   - **Personal Website / Blog**:
   - **Bio**: 
+  - **Portait Text** Vegan, Straightedge
 - Gregg Baugues
   - **Twitter**: [@greggyb](https://twitter.com/greggyb)
   - **Portrait URL**: 
@@ -72,6 +78,7 @@ August 22, 2013 7-11pm
   - **Company URL**:
   - **Personal Website / Blog**:
   - **Bio**: 
+  - **Portait Text** TableXI
 - Blithe Rocher
   - **Twitter**: [@blithe](https://twitter.com/blithe)
   - **Portrait URL**: https://sapling.wufoo.com/cabinet/q7p7w1/QIJqA75r81Y%3D/blitheportraittilt2013.jpg
@@ -80,6 +87,7 @@ August 22, 2013 7-11pm
   - **Company URL**: http://www.bignerdranch.com
   - **Personal Website / Blog**: http://www.blitherocher.com
   - **Bio**: Blithe has a PhD in physical chemistry but changed careers to become a web developer at Big Nerd Ranch in Atlanta. Over the past year, Blithe has grown from RailsGirls participant to coach. She helps organize a monthly meetup for women interested in continuing to learn about Ruby on Rails. When she’s not crafting web applications or teaching new developers, she spends time traveling, riding her bike, or with her dog Nola.
+  - **Portait Text** PhD in Awesome
 
 ### Tech Stack
 
