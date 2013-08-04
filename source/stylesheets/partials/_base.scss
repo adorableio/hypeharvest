@@ -88,8 +88,9 @@ a {
   @include transition-property(all);
   @include transition-duration(.2s);
 
-  &.collapse {
-    font-size: .8em;
+  &.collapse,
+  .collapse {
+    font-size: .74em;
     @media #{$small} { font-size: 1em; }
   }
 }
