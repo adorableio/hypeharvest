@@ -1,8 +1,8 @@
 # Man, don't be clickin' and workin'
 class Main
   constructor: ->
-    $('li').find('a:first').click (event) ->
-      event.preventDefault() if $(this).parents('.break').length > 0
+    $('a.hover').click (event) ->
+      event.preventDefault()
 
     $('.top-bar-section').find('li a').click (e) ->
       $('.top-bar.expanded').removeClass('expanded')
