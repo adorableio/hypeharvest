@@ -139,7 +139,8 @@ a {
 
 .icon-twitter,
 .icon-leaf,
-.icon-ruby {
+.icon-ruby,
+.icon-link {
   display: block;
   font-family: 'icomoon';
   speak: none;
@@ -162,6 +163,7 @@ a {
 .icon-twitter:before { content: "\e000"; }
 .icon-leaf:before { content: "\e001"; }
 .icon-ruby:before { content: "\e002"; }
+.icon-link:before { content: "\e003"; }
 
 #where,
 #music,
@@ -207,3 +209,8 @@ a {
 }
 
 .f-stokes         { @include portrait("people/f-stokes.jpg"); }
+
+ul.list {
+  @extend .no-bullet;
+  margin-left: 0;
+}
