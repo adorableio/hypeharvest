@@ -210,6 +210,8 @@ a {
 
 .f-stokes         { @include portrait("people/f-stokes.jpg"); }
 
+.uncle-bob-martin { @include portrait("people/uncle-bob-martin.jpg"); }
+
 ul.list {
   @extend .no-bullet;
   margin-left: 0;
