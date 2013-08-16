@@ -209,10 +209,17 @@ a {
 }
 
 .f-stokes         { @include portrait("people/f-stokes.jpg"); }
+.dj-radish        { @include portrait("people/dj-radish.jpg"); }
 
 .uncle-bob-martin { @include portrait("people/uncle-bob-martin.jpg"); }
+.blithe-rocher    { @include portrait("people/blithe-rocher.jpg"); }
+.randall-thomas   { @include portrait("people/randall-thomas.jpg"); }
 
 ul.list {
   @extend .no-bullet;
   margin-left: 0;
+}
+
+.line-through {
+  text-decoration: line-through;
 }
