@@ -4,7 +4,7 @@ class Main
     $('a.hover').click (event) ->
       event.preventDefault()
 
-    $('.top-bar-section').find('li a').click (e) ->
+    $('.top-bar-section').find('li a').click (event) ->
       $('.top-bar.expanded').removeClass('expanded')
 
     $(document).foundation {
