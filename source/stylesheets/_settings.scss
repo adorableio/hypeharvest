@@ -213,7 +213,7 @@ $h3-font-size: emCalc(27);
 
 // $anchor-text-decoration: none;
 // $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: darken($primary-color, 5%);
+$anchor-font-color-hover: lighten($primary-color, 15%);
 
 // Style the <hr> element
 

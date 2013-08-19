@@ -215,12 +215,30 @@ a {
 .blithe-rocher    { @include portrait("people/blithe-rocher.jpg"); }
 .randall-thomas   { @include portrait("people/randall-thomas.jpg"); }
 .ashe-dryden      { @include portrait("people/ashe-dryden.jpg"); }
+.gregg-baugues    { @include portrait("people/gregg-baugues.jpg"); }
+
 
 ul.list {
   @extend .no-bullet;
   margin-left: 0;
+  li:first-child {
+    margin-top: 2px;
+    margin-bottom: 4px;
+    a {
+      border-top: 1px solid rgba(100,100,100,.2);
+      border-bottom: 1px solid rgba(100,100,100,.2);
+      padding-right: 10px;
+      padding-top: 2px;
+      padding-bottom: 4px;
+      padding-left: 10px;
+    }
+  }
 }
 
 .line-through {
   text-decoration: line-through;
+}
+
+button, .button {
+  &:hover { background: lighten($primary-color, 15%) !important; }
 }
