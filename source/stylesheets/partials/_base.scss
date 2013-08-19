@@ -217,6 +217,7 @@ a {
 .ashe-dryden      { @include portrait("people/ashe-dryden.jpg"); }
 .gregg-baugues    { @include portrait("people/gregg-baugues.jpg"); }
 
+
 ul.list {
   @extend .no-bullet;
   margin-left: 0;
