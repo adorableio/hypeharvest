@@ -138,6 +138,8 @@
 
         &:hover .text {
           @extend .shake;
+          position: relative;
+          z-index: 1000;
         }
       }
     }
@@ -158,6 +160,8 @@
     margin: 0 auto;
     display: block;
     background-image: image-url("#{$image-url}");
+    position: relative;
+    z-index: 9000;
 
     .overlay {
       @extend .portrait;
