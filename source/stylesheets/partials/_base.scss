@@ -131,7 +131,11 @@
       background-image: image-url("locked-boss.png") !important;
       .overlay {
         @extend %boss-portrait;
-        .text { margin-top: emCalc(-10px) !important; }
+        .text {
+          margin-top: emCalc(-10px) !important;
+          @media #{$medium} { margin-top: emCalc(20px) !important; }
+        }
+
         &:hover .text {
           @extend .shake;
         }
