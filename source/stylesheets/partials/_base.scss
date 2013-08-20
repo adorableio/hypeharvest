@@ -161,7 +161,7 @@
     display: block;
     background-image: image-url("#{$image-url}");
     position: relative;
-    z-index: 9000;
+    z-index: 10;
 
     .overlay {
       @extend .portrait;
