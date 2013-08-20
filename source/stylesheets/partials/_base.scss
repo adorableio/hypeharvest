@@ -43,19 +43,22 @@
 @mixin portrait($image-url) {
   position: relative;
   &.boss {
-    > a {
+    > a:not(.button) {
       @extend %boss-portrait;
       .overlay {
         @extend %boss-portrait;
         &:hover .text { margin-top: emCalc(24px); }
       }
     }
+    .button {
+      @extend .radius;
+    }
     h2 {
       font-size: emCalc(46);
-      margin-bottom: emCalc(10);
+      margin-bottom: emCalc(2);
     }
   }
-  > a {
+  > a:not(.button) {
     @extend .portrait;
     @include background-size(cover);
     cursor: default;
