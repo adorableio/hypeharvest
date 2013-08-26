@@ -128,7 +128,7 @@
     > a:not(.button) {
       &:hover { @extend .shake-side; }
       @extend %boss-portrait;
-      background-image: image-url("locked-boss.png") !important;
+      background-image: image-url("people/frank-byrne.jpg") !important;
       .overlay {
         @extend %boss-portrait;
         .text {
@@ -343,6 +343,7 @@ a {
 .ashe-dryden      { @include portrait("people/ashe-dryden.jpg"); }
 .greg-baugues    { @include portrait("people/greg-baugues.jpg"); }
 .kevin-jones    { @include portrait("people/kevin-jones.png"); }
+.frank-byrne    { @include portrait("people/frank-byrne.jpg"); }
 
 
 ul.list {
