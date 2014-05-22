@@ -40,22 +40,22 @@
   }
 }
 
-@keyframes shake-side{ 
+@keyframes shake-side{
   0% { transform: translate(0, 0); }
   40% { transform: translate(6px, 0); }
   70% { transform:  translate(0, 0); }
   90% { transform:  translate(-6px, 0); }
   100% { transform: translate(0, 0); }
 }
- 
-@-moz-keyframes shake-side{ 
+
+@-moz-keyframes shake-side{
   0% { -moz-transform: translate(0, 0); }
   40% { -moz-transform: translate(6px, 0); }
   70% { -moz-transform:  translate(0, 0); }
   90% { -moz-transform:  translate(-6px, 0); }
   100% { -moz-transform: translate(0, 0); }
 }
- 
+
 @-webkit-keyframes shake-side {
   0% { -webkit-transform: translate(0, 0); }
   40% { -webkit-transform: translate(6px, 0); }
@@ -65,14 +65,14 @@
 }
 
 .shake-side {
-  animation-name: shake-side; 
-  animation-duration: 170ms; 
-  animation-iteration-count: 2; 
+  animation-name: shake-side;
+  animation-duration: 170ms;
+  animation-iteration-count: 2;
   animation-timing-function: linear;
 
-  -moz-animation-name: shake-side; 
-  -moz-animation-duration: 170ms; 
-  -moz-animation-iteration-count: 2; 
+  -moz-animation-name: shake-side;
+  -moz-animation-duration: 170ms;
+  -moz-animation-iteration-count: 2;
   -moz-animation-timing-function: linear;
 
   -webkit-animation-name: shake-side;
@@ -81,22 +81,22 @@
   -webkit-animation-timing-function: linear;
 }
 
-@keyframes shake{ 
+@keyframes shake{
   0% { transform: translate(0, 0) rotate(6deg); }
   40% { transform: translate(0, 6px) rotate(0deg); }
   70% { transform:  translate(0, 0) rotate(-6deg); }
   90% { transform:  translate(0, -6px) rotate(-3deg); }
   100% { transform: translate(0, 0) rotate(0deg); }
 }
- 
-@-moz-keyframes shake{ 
+
+@-moz-keyframes shake{
   0% { -moz-transform: translate(0, 0) rotate(6deg); }
   40% { -moz-transform: translate(0, 6px) rotate(0deg); }
   70% { -moz-transform:  translate(0, 0) rotate(-6deg); }
   90% { -moz-transform:  translate(0, -6px) rotate(-3deg); }
   100% { -moz-transform: translate(0, 0) rotate(0deg); }
 }
- 
+
 @-webkit-keyframes shake {
   0% { -webkit-transform: translate(0, 0) rotate(6deg); }
   40% { -webkit-transform: translate(0, 6px) rotate(0deg); }
@@ -104,16 +104,16 @@
   90% { -webkit-transform:  translate(0, -6px) rotate(-3deg); }
   100% { -webkit-transform: translate(0, 0) rotate(0deg); }
 }
- 
+
 .shake {
-  animation-name: shake; 
-  animation-duration: 200ms; 
-  animation-iteration-count: 2; 
+  animation-name: shake;
+  animation-duration: 200ms;
+  animation-iteration-count: 2;
   animation-timing-function: linear;
 
-  -moz-animation-name: shake; 
-  -moz-animation-duration: 200ms; 
-  -moz-animation-iteration-count: 2; 
+  -moz-animation-name: shake;
+  -moz-animation-duration: 200ms;
+  -moz-animation-iteration-count: 2;
   -moz-animation-timing-function: linear;
 
   -webkit-animation-name: shake;
@@ -334,16 +334,7 @@ a {
   a { color: $light-green; }
 }
 
-.f-stokes         { @include portrait("people/f-stokes.jpg"); }
-.dj-radish        { @include portrait("people/dj-radish.jpg"); }
-
-.uncle-bob-martin { @include portrait("people/uncle-bob-martin.jpg"); }
-.blithe-rocher    { @include portrait("people/blithe-rocher.jpg"); }
-.randall-thomas   { @include portrait("people/randall-thomas.jpg"); }
-.ashe-dryden      { @include portrait("people/ashe-dryden.jpg"); }
-.greg-baugues    { @include portrait("people/greg-baugues.jpg"); }
-.kevin-jones    { @include portrait("people/kevin-jones.png"); }
-.frank-byrne    { @include portrait("people/frank-byrne.jpg"); }
+// .name-of-speaker         { @include portrait("people/name-of-speaker.jpg"); }
 
 
 ul.list {
@@ -369,4 +360,20 @@ ul.list {
 
 button, .button {
   &:hover { background: lighten($primary-color, 15%) !important; }
+}
+
+@mixin top-bar-thing {
+  .top-bar {
+    li.has-form .button {
+      display: inline;
+      top: 10px;
+      padding-top: 4px;
+      padding-bottom: 6px;
+    }
+  }
+}
+
+
+@media #{$small} {
+  @include top-bar-thing;
 }
