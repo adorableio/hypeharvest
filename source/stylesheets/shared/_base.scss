@@ -294,9 +294,22 @@ a {
 #music,
 #speakers { padding-top: 20px; margin-top: -20px; }
 
+#where-map {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 120%;
+}
+
 .where {
   @include bg($white);
   @extend %section-pad;
+  position: relative;
+  overflow: hidden;
 
   h2 {
     // text-transform: uppercase;
