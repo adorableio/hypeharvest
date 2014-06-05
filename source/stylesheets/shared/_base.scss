@@ -1,7 +1,7 @@
 
 // Mixins and Modules
 @mixin bg($color) {
-  background-image: image-url('textured-paper.png');
+  // background-image: image-url('textured-paper.png');
   background-color: $color;
 }
 
@@ -9,12 +9,15 @@
   &,h1,h2,h3,h4,h5,p { color: $white; }
 }
 
-%pad {
-  .row { padding-bottom: emCalc(20px); }
+%section-pad {
+  .row {
+    padding-bottom: emCalc(60px);
+    padding-top: emCalc(60px);
+  }
 }
 
 .portrait {
-  @include border-radius(1000px);
+  // @include border-radius(1000px);
   height: 140px;
   width: 140px;
   @media #{$small} {
@@ -147,7 +150,7 @@
       @extend .radius;
     }
     h2 {
-      @include text-shadow(0 1px 0 rgba(0,0,0,0.1));
+      @include text-shadow(0 1px 0 rgba($black,0.1));
       font-size: emCalc(46);
       margin-bottom: emCalc(2);
     }
@@ -167,7 +170,7 @@
       @extend .portrait;
       @include transition-property(opacity);
       @include transition-duration(.3s);
-      background: rgba(228, 45, 76,.8);
+      background: rgba($red,.8);
       color: $white;
       font-weight: 600;
       opacity: 0;
@@ -205,8 +208,9 @@
 }
 
 body {
-  @include bg($white);
-  @include text-shadow(0 1px 0 rgba(0,0,0,0.4));
+  @include bg($black);
+  @include text-shadow(0 1px 0 rgba($black,0.4));
+  font-size: 22px;
   overflow-x: hidden;
   width: 100%;
 }
@@ -223,23 +227,24 @@ a {
 }
 
 .header {
-  @extend %pad;
+  @extend %section-pad;
+  @include bg($black);
   @include background-size(cover);
   @extend %white-text;
-  background-image: image-url('header-bg.png');
+  // background-image: image-url('header-bg.png');
   background-position: center 80%;
 
   .wrap { @include bg(none); }
 
-  a { color: $light-green; }
+  a { color: $linky-color; }
 
-  p { font-weight: 600; }
+  p { font-weight: 500; }
 
   h1 {
     @include background-size(contain);
     display: block;
     height: 270px;
-    background-image: image-url('header-logo.png');
+    background-image: image-url('header-logo.svg');
     background-repeat: no-repeat;
     background-position: center;
     font-size: emCalc(64px);
@@ -257,7 +262,7 @@ a {
     }
 
     &:hover a {
-      color: lighten($light-green, 20%);
+      // color: $linky-color, 20%);
       opacity: 1;
     }
   }
@@ -278,11 +283,10 @@ a {
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  opacity: .5;
+  // opacity: .5;
   @media #{$small} {
-    @include inline-block;
-    font-size: 1em;
-    margin: 0;
+    font-size: 3em;
+    margin-bottom: 12px;
   }
 }
 
@@ -297,7 +301,35 @@ a {
 
 .where {
   @include bg($white);
-  @extend %pad;
+  @extend %section-pad;
+
+  h2 {
+    // text-transform: uppercase;
+    font-weight: 300;
+
+    .line {
+      line-height: 1;
+
+      &.one { font-size: 42px; }
+
+      &.two {
+        color: rgba($black, .4);
+        font-weight: 400;
+        font-size: 0;
+        letter-spacing: 4px;
+        line-height: 1;
+        margin: 20px auto 10px;
+        width: 60px;
+        height: 4px;
+        background: $blue;
+        position: relative;
+      }
+
+      &.three {
+        font-size: 64px;
+      }
+    }
+  }
 
   .vcard {
     text-align: left;
@@ -307,31 +339,31 @@ a {
   }
 
   .map {
-    @include box-shadow(0 2px 3px rgba(0,0,0, .26));
+    @include box-shadow(0 2px 3px rgba($black, .26));
     border: 2px solid $white;
   }
 }
 
 //
-.locked { @include portrait("locked.png"); }
+.locked { @include portrait("locked.svg"); }
 
 .musical-guests {
-  @extend %pad;
+  @extend %section-pad;
   @include bg($black);
   @extend %white-text;
 }
 
 .speakers {
-  @extend %pad;
+  @extend %section-pad;
   @include bg($white);
 }
 
 .footer {
   @extend %white-text;
-  @include bg($green);
+  @include bg($black);
   padding-top: 1em;
 
-  a { color: $light-green; }
+  a { color: $linky-color; }
 }
 
 // .name-of-speaker         { @include portrait("people/name-of-speaker.jpg"); }
@@ -344,8 +376,8 @@ ul.list {
     margin-top: 2px;
     margin-bottom: 4px;
     a {
-      border-top: 1px solid rgba(100,100,100,.2);
-      border-bottom: 1px solid rgba(100,100,100,.2);
+      border-top: 1px solid rgba($black,.2);
+      border-bottom: 1px solid rgba($black,.2);
       padding-right: 10px;
       padding-top: 2px;
       padding-bottom: 4px;
@@ -366,13 +398,17 @@ button, .button {
   .top-bar {
     li.has-form .button {
       display: inline;
-      top: 10px;
+      top: 6px;
       padding-top: 4px;
       padding-bottom: 6px;
     }
   }
 }
 
+
+.top-bar .toggle-topbar.menu-icon a {
+  text-indent: -58px;
+}
 
 @media #{$small} {
   @include top-bar-thing;
