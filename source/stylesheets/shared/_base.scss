@@ -481,13 +481,20 @@ button, .button {
   }
 }
 
+$small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)";
 
 @media #{$small} {
   @include top-bar-thing;
   body {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   .header { @include section-pad; }
 
+}
+
+@media #{$small-up} {
+  body {
+    font-size: 1rem;
+  }
 }
