@@ -446,6 +446,7 @@ button, .button {
 }
 
 .sticky {
+  padding-top: 20px;
   .top-bar { background-color: transparent !important; }
 
   &:before {
@@ -460,6 +461,7 @@ button, .button {
     height: 5px;
   }
 
+  &.fixed { padding-top: 0; }
   &.fixed:before {
     background: rgba($black, .9);
     height: 50px;
