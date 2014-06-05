@@ -13,8 +13,12 @@
   .row {
     padding-bottom: emCalc(60px);
     padding-top: emCalc(60px);
+    &.short-top {
+      padding-top: 0;
+    }
   }
 }
+
 %section-pad {
   @include section-pad;
 }
@@ -153,7 +157,7 @@
       @extend .radius;
     }
     h2 {
-      @include text-shadow(0 1px 0 rgba($black,0.1));
+      // @include text-shadow(0 1px 0 rgba($black,0.1));
       font-size: emCalc(46);
       margin-bottom: emCalc(2);
     }
@@ -212,7 +216,7 @@
 
 body {
   @include bg($black);
-  @include text-shadow(0 1px 0 rgba($black,0.4));
+  // @include text-shadow(0 1px 0 rgba($black,0.4));
   font-size: 1rem;
   overflow-x: hidden;
   width: 100%;
@@ -261,7 +265,7 @@ a {
     z-index: 2;
   }
 
-  p { font-weight: 500; }
+  // p { font-weight: 500; }
 
   h1 {
     @include background-size(contain);
@@ -433,8 +437,8 @@ button, .button {
     li.has-form .button {
       display: inline;
       top: 1px;
-      padding-top: 4px;
-      padding-bottom: 7px;
+      padding-top: 14px;
+      padding-bottom: 15px;
     }
   }
 }
@@ -451,21 +455,33 @@ button, .button {
 
   &:before {
     @include transition(all .3s ease);
-    background: $blue;
+    background: $red;
     position: absolute;
     content: '';
     top: 0;
     right: 0;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 6px;
   }
 
-  &.fixed { padding-top: 0; }
-  &.fixed:before {
-    background: rgba($black, .9);
-    height: 50px;
+  // &.fixed { padding-top: 0; }
+  &.fixed {
+    ul > li,
+    ul > li a { color: $black; }
+    .top-bar-section {
+      ul > li button,
+      ul > li .button {
+        border-color: $black;
+      }
+    }
+
+    &:before {
+      background: rgba($cream, .95);
+      height: 88px;
+    }
   }
+
 }
 
 .top-bar-section {
@@ -473,12 +489,24 @@ button, .button {
   li,
   li a { background-color: transparent !important; }
 
-  button,
-  .button {
-    background-color: $primary-color !important;
+  ul > li a {
+    border-bottom: none;
+    font-weight: 600;
+    &:hover { border-bottom: 2px solid $red; }
+  }
+
+  ul > li button,
+  ul > li .button {
+    @include border-radius(0);
+    background-color: transparent !important;
+    border: 2px solid $white;
+    color: $white;
+    padding-left: 20px;
+    padding-right: 20px;
     &:hover {
-      background: $blue !important;
-      border-color: $blue;
+      background-color: $red !important;
+      border-color: $red !important;
+      color: $white;
     }
   }
 }
