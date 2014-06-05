@@ -233,10 +233,26 @@ a {
   @include bg($black);
   @include background-size(cover);
   @extend %white-text;
-  // background-image: image-url('header-bg.png');
+  background-image: image-url('djboom.jpg');
   background-position: center 80%;
+  position: relative;
 
-  .wrap { @include bg(none); }
+  &:after {
+    background: rgba($black, .6);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .wrap {
+    @include bg(none);
+    position: relative;
+    z-index: 2;
+  }
 
   p { font-weight: 500; }
 
