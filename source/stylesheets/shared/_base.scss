@@ -465,8 +465,17 @@ button, .button {
     height: 6px;
   }
 
-  // &.fixed { padding-top: 0; }
+
   &.fixed {
+    .top-bar .toggle-topbar.menu-icon a {
+      color: $black;
+      span {
+        @include box-shadow(0 10px 0 1px $black,
+                            0 16px 0 1px $black,
+                            0 22px 0 1px $black);
+      }
+    }
+
     ul > li,
     ul > li a { color: $black; }
     .top-bar-section {
@@ -490,7 +499,7 @@ button, .button {
   li a { background-color: transparent !important; }
 
   ul > li a {
-    border-bottom: none;
+    border-bottom: 2px solid transparent;
     font-weight: 600;
     &:hover { border-bottom: 2px solid $red; }
   }

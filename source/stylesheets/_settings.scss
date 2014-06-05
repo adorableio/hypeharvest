@@ -1278,10 +1278,10 @@ $topbar-dropdown-bg: $black;
 // Top menu icon styles
 
 // $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: emCalc(13);
-// $topbar-menu-link-weight: bold;
+$topbar-menu-link-font-size: emCalc(16);
+$topbar-menu-link-weight: 600;
 // $topbar-menu-link-color: #fff;
-// $topbar-menu-icon-color: #fff;
+$topbar-menu-icon-color: $white;
 // $topbar-menu-link-color-toggled: #888;
 // $topbar-menu-icon-color-toggled: #888;
 
