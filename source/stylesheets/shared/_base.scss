@@ -170,7 +170,7 @@
       @extend .portrait;
       @include transition-property(opacity);
       @include transition-duration(.3s);
-      background: rgba($red,.8);
+      background: rgba($blue,.8);
       color: $white;
       font-weight: 600;
       opacity: 0;
@@ -216,8 +216,10 @@ body {
 }
 
 a {
-  @include transition-property(all);
-  @include transition-duration(.2s);
+  @include transition(all .3s ease);
+  color: $linky-color;
+
+  &:hover { color: $blue; }
 
   &.collapse,
   .collapse {
@@ -235,8 +237,6 @@ a {
   background-position: center 80%;
 
   .wrap { @include bg(none); }
-
-  a { color: $linky-color; }
 
   p { font-weight: 500; }
 
@@ -259,11 +259,6 @@ a {
     a {
       @include transition-property(all);
       @include transition-duration(.2s);
-    }
-
-    &:hover a {
-      // color: $linky-color, 20%);
-      opacity: 1;
     }
   }
 }
@@ -362,8 +357,6 @@ a {
   @extend %white-text;
   @include bg($black);
   padding-top: 1em;
-
-  a { color: $linky-color; }
 }
 
 // .name-of-speaker         { @include portrait("people/name-of-speaker.jpg"); }
@@ -391,16 +384,20 @@ ul.list {
 }
 
 button, .button {
-  &:hover { background: lighten($primary-color, 15%) !important; }
+  @include transition(all .3s ease);
+  &:hover {
+    background: $blue !important;
+    border-color: $blue;
+  }
 }
 
 @mixin top-bar-thing {
   .top-bar {
     li.has-form .button {
       display: inline;
-      top: 6px;
-      padding-top: 4px;
-      padding-bottom: 6px;
+      top: 5px;
+      padding-top: 3px;
+      padding-bottom: 3px;
     }
   }
 }
@@ -408,6 +405,21 @@ button, .button {
 
 .top-bar .toggle-topbar.menu-icon a {
   text-indent: -58px;
+}
+
+.top-bar-section {
+  ul,
+  li,
+  li a { background-color: transparent !important; }
+
+  button,
+  .button {
+    background-color: $primary-color !important;
+    &:hover {
+      background: $blue !important;
+      border-color: $blue;
+    }
+  }
 }
 
 @media #{$small} {
