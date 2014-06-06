@@ -26,7 +26,7 @@ class TopBar
 
 
   get top: ->
-    scrollTop = $("body").scrollTop()
+    scrollTop = $("body").scrollTop() || $("html").scrollTop()
     @_top = (scrollTop < 1)
     return @_top
   set top: (val) -> return @_top = val

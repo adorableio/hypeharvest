@@ -25,6 +25,7 @@ class Main
     if (destHref == "#!")
       return
     else if (destHref == "#")
+      @topBar.expanded = false
       destPos = 0
     else
       $el = $(destHref)

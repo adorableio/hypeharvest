@@ -176,7 +176,7 @@
     .overlay {
       @extend .portrait;
       @include transition-property(opacity);
-      @include transition-duration(.3s);
+      @include transition-duration(0.3s);
       background: rgba($blue,.8);
       color: $white;
       font-weight: 600;
@@ -189,7 +189,7 @@
       padding-left: emCalc(20px);
       .text {
         @include transition-property(all);
-        @include transition-duration(.4s);
+        @include transition-duration(0.4s);
         margin-top: emCalc(-20px);
         opacity: 0;
         height: 100%;
@@ -225,7 +225,7 @@ body {
 }
 
 a {
-  @include transition(all .3s ease);
+  @include transition(all 0.3s ease);
   color: $linky-color;
 
   &:hover { color: $blue; }
@@ -287,7 +287,7 @@ a {
   li {
     a {
       @include transition-property(all);
-      @include transition-duration(.2s);
+      @include transition-duration(0.2s);
     }
   }
 }
@@ -426,7 +426,7 @@ ul.list {
 }
 
 button, .button {
-  @include transition(all .3s ease);
+  @include transition(all 0.3s ease);
   &:hover {
     background: $blue !important;
     border-color: $blue;
@@ -448,7 +448,7 @@ button, .button {
 .top-bar {
   z-index: 300;
   .top-bar-section {
-    @include transition(opacity .2s ease-out .3s);
+    @include transition(opacity 0.2s ease-out 0.3s);
     opacity: 0;
   }
   &.expanded .top-bar-section { opacity: 1; }
@@ -464,7 +464,12 @@ button, .button {
   padding-top: 20px;
 
   &.fixed {
-    .top-bar { @include transition(opacity .2s ease); }
+    &:before {
+      background-color: rgba($cream, .95);
+      height: 88px;
+    }
+
+    .top-bar { @include transition(opacity 0.2s ease); }
     .top-bar.expanded .title-area { background: transparent; }
     .top-bar .toggle-topbar.menu-icon a {
       color: $black;
@@ -493,23 +498,20 @@ button, .button {
         border-color: $black;
       }
     }
-
-    &:before {
-      background: rgba($cream, .95);
-      height: 88px;
-    }
   }
 
   &:before {
-    @include transition(all .3s ease);
-    background: $red;
+    @include transition(height 0.3s ease);
+    background-color: $red;
     position: absolute;
     content: '';
-    top: 0;
+    display: block;
     right: 0;
     left: 0;
+    top: 0;
     width: 100%;
     height: 6px;
+    z-index: 100;
   }
 
   .top-bar { background-color: transparent !important; }
