@@ -220,6 +220,8 @@ body {
   font-size: 1rem;
   overflow-x: hidden;
   width: 100%;
+
+  &.fixered { padding-top: 65px; }
 }
 
 a {
@@ -435,23 +437,68 @@ button, .button {
   .top-bar {
     z-index: 100;
     li.has-form .button {
-      display: inline;
-      top: 1px;
-      padding-top: 14px;
-      padding-bottom: 15px;
+      top: 0;
+      padding-top: 12px;
+      padding-bottom: 14px;
+      line-height: 1;
     }
   }
 }
 
-.top-bar { z-index: 300; }
+.top-bar {
+  z-index: 300;
+  .top-bar-section {
+    @include transition(opacity .2s ease-out .3s);
+    opacity: 0;
+  }
+  &.expanded .top-bar-section { opacity: 1; }
+
+}
 
 .top-bar .toggle-topbar.menu-icon a {
   text-indent: -58px;
 }
 
+
 .sticky {
   padding-top: 20px;
-  .top-bar { background-color: transparent !important; }
+
+  &.fixed {
+    .top-bar { @include transition(opacity .2s ease); }
+    .top-bar.expanded .title-area { background: transparent; }
+    .top-bar .toggle-topbar.menu-icon a {
+      color: $black;
+      span {
+        @include box-shadow(0 10px 0 1px $black,
+                            0 16px 0 1px $black,
+                            0 22px 0 1px $black);
+      }
+    }
+
+    ul > li,
+    ul > li a { color: $black; }
+
+    .top-bar.expanded .top-bar-section {
+      ul {
+        margin-top: 23px;
+        background-color: rgba($cream, .95) !important;
+      }
+    }
+
+    .top-bar-section {
+      ul { background-color: rgba($cream, .95); }
+      ul > li button,
+      ul > li .button {
+        color: $black;
+        border-color: $black;
+      }
+    }
+
+    &:before {
+      background: rgba($cream, .95);
+      height: 88px;
+    }
+  }
 
   &:before {
     @include transition(all .3s ease);
@@ -465,65 +512,53 @@ button, .button {
     height: 6px;
   }
 
+  .top-bar { background-color: transparent !important; }
+  .top-bar-section {
+    ul { background-color: transparent !important; }
 
-  &.fixed {
-    .top-bar .toggle-topbar.menu-icon a {
-      color: $black;
-      span {
-        @include box-shadow(0 10px 0 1px $black,
-                            0 16px 0 1px $black,
-                            0 22px 0 1px $black);
-      }
+    li,
+    li a { background-color: transparent !important; }
+
+    ul > li a {
+      border-bottom: 2px solid transparent;
+      font-weight: 600;
+      &:hover { border-bottom: 2px solid $red; }
     }
 
-    ul > li,
-    ul > li a { color: $black; }
-    .top-bar-section {
-      ul > li button,
-      ul > li .button {
-        border-color: $black;
-      }
-    }
-
-    &:before {
-      background: rgba($cream, .95);
-      height: 88px;
-    }
-  }
-
-}
-
-.top-bar-section {
-  ul,
-  li,
-  li a { background-color: transparent !important; }
-
-  ul > li a {
-    border-bottom: 2px solid transparent;
-    font-weight: 600;
-    &:hover { border-bottom: 2px solid $red; }
-  }
-
-  ul > li button,
-  ul > li .button {
-    @include border-radius(0);
-    background-color: transparent !important;
-    border: 2px solid $white;
-    color: $white;
-    padding-left: 20px;
-    padding-right: 20px;
-    &:hover {
-      background-color: $red !important;
-      border-color: $red !important;
+    ul > li button,
+    ul > li .button {
+      @include border-radius(0);
+      @include inline-block;
+      background-color: transparent !important;
+      border: 2px solid $white;
       color: $white;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: auto;
+      &:hover {
+        background-color: $red !important;
+        border-color: $red !important;
+        color: $white;
+      }
     }
   }
+
 }
 
 $small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)";
 
 @media #{$small} {
   @include top-bar-thing;
+
+  .top-bar .top-bar-section { opacity: 1; }
+  .top-bar-section {
+    margin-top: 0;
+    ul,
+    li,
+    li a,
+    &.fixed ul { background-color: transparent !important; }
+  }
+
   body {
     font-size: 1.6rem;
   }
@@ -535,5 +570,18 @@ $small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)
 @media #{$small-up} {
   body {
     font-size: 1rem;
+  }
+  .sticky .top-bar-section {
+    ul > li button,
+    ul > li .button {
+      top: 4px;
+      padding-bottom: 12px;
+    }
+  }
+}
+
+@media screen and (max-height: 760px) {
+  .header h1 {
+    height: 200px;
   }
 }

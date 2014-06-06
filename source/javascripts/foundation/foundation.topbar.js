@@ -19,6 +19,8 @@
       init : false
     },
 
+    expanded: false,
+
     init : function (section, method, options) {
       Foundation.inherit(this, 'data_options');
       var self = this;
@@ -69,7 +71,8 @@
 
     events : function () {
       var self = this;
-      var offst = this.outerHeight($('.top-bar, [data-topbar]'));
+      var klass = '.' + this.settings.stickyClass;
+      var offst = this.outerHeight($(klass));
       $(this.scope)
         .off('.fndtn.topbar')
         .on('click.fndtn.topbar', '.top-bar .toggle-topbar, [data-topbar] .toggle-topbar', function (e) {
@@ -94,22 +97,22 @@
             topbar
               .toggleClass('expanded')
               .css('height', '');
+
+            self.expanded = !self.expanded;
           }
 
-          if (!topbar.hasClass('expanded')) {
-            if (topbar.hasClass('fixed')) {
-              topbar.parent().addClass('fixed');
-              topbar.removeClass('fixed');
+          if (!self.expanded) {
+            if ($('body').scrollTop() == 0) {
+              $('body').css('padding-top',0);
+              topbar.parent().removeClass('fixed');
+            }
+          }
+          else if (self.expanded) {
+            if ($('body').scrollTop() == 0) {
               $('body').css('padding-top',offst);
+              topbar.parent().addClass('fixed');
             }
-          } else if (topbar.parent().hasClass('fixed')) {
-            topbar.parent().removeClass('fixed');
-            topbar.addClass('fixed');
-            $('body').css('padding-top','0');
 
-            if (self.settings.scrolltop) {
-              window.scrollTo(0,0);
-            }
           }
         })
 
@@ -264,11 +267,12 @@
     },
 
     sticky : function () {
+      var self = this;
       var klass = '.' + this.settings.stickyClass;
       if ($(klass).length > 0) {
         var distance = $(klass).length ? $(klass).offset().top: 0,
             $window = $(window),
-            offst = this.outerHeight($('.top-bar')),
+            offst = this.outerHeight($(klass)),
             t_top;
 
           //Whe resize elements of the page on windows resize. Must recalculate distance
@@ -281,10 +285,15 @@
           $window.scroll(function() {
             if ($window.scrollTop() > (distance)) {
               $(klass).addClass("fixed");
-              $('body').css('padding-top',offst);
             } else if ($window.scrollTop() <= distance) {
-              $(klass).removeClass("fixed");
-              $('body').css('padding-top','0');
+              if (self.expanded == true) {
+                console.log(offst);
+                $('body').css('padding-top',offst);
+              }
+              else {
+                $(klass).removeClass("fixed");
+                $('body').css('padding-top',0);
+              }
             }
         });
       }

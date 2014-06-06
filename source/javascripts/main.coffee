@@ -1,18 +1,40 @@
+#= require "./topbar"
+
 # Man, don't be clickin' and workin'
 class Main
   constructor: ->
-    $('a.hover').click (event) ->
-      event.preventDefault()
+    $('a.hover').click (event) -> event.preventDefault()
 
-    $('.top-bar-section').find('li a').click (event) ->
-      $('.top-bar.expanded').removeClass('expanded')
+    @topBar = new TopBar()
+    @setupEvents()
 
-    $(document).foundation {
-      index : 0,
-      stickyClass : 'sticky',
-      custom_back_text: true,
-      back_text: 'Back',
-      init : true
-    }
+  setupEvents: ->
 
-window.main = new Main()
+    $("a[href^='#!']").on "click", (e) =>
+      e.preventDefault()
+      $("sticky").addClass("fixed") if ($('body').scrollTop() > 0)
+
+    $("a[href^='#']").on "click", (e) =>
+      console.log "anchor"
+      e.preventDefault()
+      $el = $(e.currentTarget)
+      @scrawlTo($el.attr("href"))
+
+
+  scrawlTo: (destHref) ->
+    if (destHref == "#!")
+      return
+    else if (destHref == "#")
+      destPos = 0
+    else
+      $el = $(destHref)
+      destPos = $el.offset().top
+
+    if destPos?
+      console.log "animate"
+      $('html, body').animate({
+        scrollTop: destPos
+      }, 400 )
+
+$ ->
+  window.main = new Main()
