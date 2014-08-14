@@ -1,3 +1,4 @@
+$small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)";
 
 // Mixins and Modules
 @mixin bg($color) {
@@ -435,9 +436,18 @@ ul.list {
 
 button, .button {
   @include transition(all 0.3s ease);
+  font-weight: 600;
+  margin-bottom: -10px;
   &:hover {
     background: $blue !important;
     border-color: $blue;
+  }
+
+  @media #{$small-up} {
+    margin-bottom: 1.75em;
+  }
+  @media #{$medium} {
+    margin-bottom: .65em;
   }
 }
 
@@ -554,8 +564,6 @@ button, .button {
   }
 
 }
-
-$small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)";
 
 @media #{$small} {
   @include top-bar-thing;

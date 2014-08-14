@@ -39,7 +39,7 @@ $(document).ready(function() {
         stylers: [{ color: '#f9f4f2' } ]}
     ];
 
-    var center = new google.maps.LatLng(43.07542, -89.3894);
+    var center = new google.maps.LatLng(43.0745, -89.3894);
 
     var map_canvas = document.getElementById('where-map');
     var map_options = {
