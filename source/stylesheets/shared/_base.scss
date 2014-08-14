@@ -179,26 +179,28 @@
       @include transition-duration(0.3s);
       background: rgba($blue,.8);
       color: $white;
+      display: table;
       font-weight: 600;
       opacity: 0;
+      overflow: hidden;
       margin: 0 auto;
       position: absolute;
-      padding-top: emCalc(40px);
-      padding-right: emCalc(20px);
-      padding-bottom: emCalc(20px);
-      padding-left: emCalc(20px);
+      padding: 0;
       .text {
         @include transition-property(all);
         @include transition-duration(0.4s);
-        margin-top: emCalc(-20px);
+        display: table-cell;
+        position: relative;
+        top: -100%;
         opacity: 0;
         height: 100%;
       }
       &:hover {
         opacity: 1;
         .text {
-          margin-top: emCalc(10px);
+          top: 0;
           opacity: 1;
+          vertical-align: middle;
         }
       }
     }
@@ -399,6 +401,12 @@ a {
   @extend %white-text;
   @include bg($black);
   padding-top: 1em;
+}
+
+.guest-list {
+  h2 { font-size: 1.65em; }
+  .text { font-size: .75em; }
+
 }
 
 // .name-of-speaker         { @include portrait("people/name-of-speaker.jpg"); }
