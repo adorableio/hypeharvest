@@ -166,10 +166,11 @@
   > a:not(.button) {
     @extend .portrait;
     @include background-size(cover);
-    cursor: default;
-    margin: 0 auto;
-    display: block;
     background-image: image-url("#{$image-url}");
+    cursor: default;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
     position: relative;
     z-index: 10;
 
@@ -179,26 +180,27 @@
       @include transition-duration(0.3s);
       background: rgba($blue,.8);
       color: $white;
+      display: table;
       font-weight: 600;
-      opacity: 0;
       margin: 0 auto;
+      opacity: 0;
+      padding: 0;
       position: absolute;
-      padding-top: emCalc(40px);
-      padding-right: emCalc(20px);
-      padding-bottom: emCalc(20px);
-      padding-left: emCalc(20px);
       .text {
         @include transition-property(all);
         @include transition-duration(0.4s);
-        margin-top: emCalc(-20px);
-        opacity: 0;
+        display: table-cell;
         height: 100%;
+        opacity: 0;
+        position: relative;
+        padding-bottom: 100%;
+        vertical-align: middle;
       }
       &:hover {
         opacity: 1;
         .text {
-          margin-top: emCalc(10px);
           opacity: 1;
+          padding-bottom: 0%;
         }
       }
     }
@@ -399,6 +401,12 @@ a {
   @extend %white-text;
   @include bg($black);
   padding-top: 1em;
+}
+
+.guest-list {
+  h2 { font-size: 1.65em; }
+  .text { font-size: .75em; }
+
 }
 
 // .name-of-speaker         { @include portrait("people/name-of-speaker.jpg"); }
