@@ -70,7 +70,7 @@ class TopBar
 
   setupMenu: ($menuButton) ->
     $menuButton.on "click", (e) => @expanded = !@expanded
-    @$topbar.find('.top-bar-section li a').on "click", (e) => @expanded = false
+    @$topbar.find('.top-bar-section li a').on "mouseup", (e) => @expanded = false
 
 
 
