@@ -418,6 +418,15 @@ a {
 
 // .name-of-speaker         { @include portrait("people/name-of-speaker.jpg"); }
 
+ul.sponsor-list {
+  @extend .no-bullet;
+  margin-top: 2em;
+  margin-bottom: 1.4em;
+  li {
+    @include inline-block;
+    margin-right: $column-gutter / 2;
+  }
+}
 
 ul.list {
   @extend .no-bullet;
