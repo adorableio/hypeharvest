@@ -421,7 +421,7 @@ a {
 ul.sponsor-list {
   @extend .no-bullet;
   margin-top: 2em;
-  margin-bottom: 1.4em;
+  margin-bottom: 1.2em;
   li {
     @include inline-block;
     margin-right: $column-gutter / 2;
