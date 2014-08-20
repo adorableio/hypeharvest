@@ -324,6 +324,7 @@ a {
 
 #where,
 #music,
+#sponsors,
 #speakers { padding-top: 20px; margin-top: -20px; }
 
 #where-map {
@@ -391,6 +392,11 @@ a {
   @extend %section-pad;
   @include bg($black);
   @extend %white-text;
+}
+
+.sponsors {
+  @extend %section-pad;
+  @include bg($white);
 }
 
 .speakers {
