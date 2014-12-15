@@ -277,7 +277,7 @@ a {
   h1 {
     @include background-size(contain);
     display: block;
-    height: 540px;
+    height: 340px;
     background-image: image-url('header-logo.svg');
     background-repeat: no-repeat;
     background-position: center;
