@@ -1,49 +1,48 @@
 - content_for :head do
-  %title #HYPERNATION
+  %title= t('brand')
 
 .sticky
   .top-bar
     %ul.title-area
       %li.name
         %h1
-          %a(href="#") #HYPERNATION
+          %a(href="#")= t('brand')
       %li.toggle-topbar.menu-icon
         %a(href="#!")
           %span Menu
     %section.top-bar-section
       %ul.right
         %li
-          %a(href="#where") When & Where
+          %a(href="#{data.app.navigation_links.when_and_where}")= t('navigation.when_and_where')
         %li
-          %a(href="#music") Musical Guests
+          %a(href="#{data.app.navigation_links.musical_guests}")= t('navigation.musical_guests')
         %li
-          %a(href="#speakers") Speakers
+          %a(href="#{data.app.navigation_links.speakers}")= t('navigation.speakers')
         %li.has-form
-          %a.button.radius(href="http://igg.me/at/hh14/")
-            Donate
+          %a.button.radius(href="#{data.app.navigation_links.call_to_action}")
+            = t('navigation.call_to_action')
 .header
   .wrap
     .row
       .content-centered
-        %h1 #HYPERNATION
-        %p
-          <a href="http://madisonpl.us/ruby">Madison+ Ruby</a> has grown a reputation for being <a href="https://twitter.com/search?q=madisonruby">one of the best regional conferences around</a> and as such people just want to be involved. We've built a great event and are now harvesting some of the hype that surrounds it. In usual <a href="http://saplingevents.com/">Sapling Events</a> style it's ... well, you'll see.
+        %h1= t('brand')
+        %p= t('hero.copy')
 
     .row.short-top
       .content-centered
         %ul.small-block-grid-3
           %li
-            %a(href="http://www.madisonpl.us/ruby")
+            %a(href="http://www.madisonpl.us/")
               %i.icon-ruby
-              %span.collapse Madison+ Ruby Conference
+              %span.collapse Madison+
           %li
             %a(href="http://www.saplingevents.com/")
               %i.icon-leaf
               %span.collapse Sapling Events
           %li
-            %a(href="https://twitter.com/search?q=%23HYPERNATION%20OR%20%23whatishypernation&src=typd")
+            %a(href="#{twitter_link(t('brand'))}")
               %i.icon-twitter
-              %span.collapse #HYPERNATION on Twitter
+              %span.collapse= t('hero.links.twitter.copy')
 #where
 .where
   #where-map
@@ -63,7 +62,7 @@
 .sponsors
   .row
     .content-centered
-      %h5 #HYPERNATION made possible by
+      %h5= "#{t('brand')} made possible by"
       %ul.sponsor-list
         %li
           %a(href="http://www.wellbe.me/")
