@@ -1,0 +1,25 @@
+---
+en:
+  brand: "#HYPEBRR"
+  navigation:
+    when_and_where: 'When & Where'
+    musical_guests: 'Musical Guests'
+    speakers: 'Speakers'
+    call_to_action: 'Donate'
+
+  hero:
+    copy: |
+      Come join us for a night of food, cocktails, music, games and an amazing
+      list of guest speakers! <a href="#">YWCA</a> and <a href="#">Adorable</a>
+      have come together to teach computer coding to young women and people of
+      color who are underrepresented in the technology field. We can’t do this
+      alone and are looking for your support.
+    links:
+      madison:
+        copy: Madison+
+        link: http://www.madisonpl.us/
+      sapling_events:
+        copy: Sapling Events
+        link: http://www.saplingevents.com/
+      twitter:
+        copy: "#HYPEBRR on Twitter"
