@@ -27,6 +27,7 @@ require "zurb-foundation"
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
+activate :i18n
 
 ###
 # Page command
