@@ -1,35 +1,33 @@
 - content_for :head do
-  %title #HYPEBRR
+  %title= t('brand')
 
 .sticky
   .top-bar
     %ul.title-area
       %li.name
         %h1
-          %a(href="/") #HYPEBRR
+          %a(href="#")= t('brand')
       %li.toggle-topbar.menu-icon
         %a(href="#!")
           %span Menu
     %section.top-bar-section
       %ul.right
         %li
-          %a(href="#where") When & Where
+          %a(href="#{data.app.navigation_links.when_and_where}")= t('navigation.when_and_where')
         %li
-          %a(href="#music") Musical Guests
+          %a(href="#{data.app.navigation_links.musical_guests}")= t('navigation.musical_guests')
         %li
-          %a(href="#speakers") Speakers
+          %a(href="#{data.app.navigation_links.speakers}")= t('navigation.speakers')
         %li.has-form
-          %a.button.radius(href="https://ti.to/sapling/hypebrr")
-            Register
+          %a.button.radius(href="#{data.app.navigation_links.call_to_action}")
+            = t('navigation.call_to_action')
 .header
   .wrap
     .row
       .content-centered
-        %h1 #HYPEBRR
-        %h3 Educate, Empower, & Employ
-        %p
-
-          Come join us for a night of food, cocktails, music, games and an amazing list of guest speakers. <a href="http://www.ywcamadison.org">YWCA of Madison</a> and <a href="http://adorable.io">Adorable</a> have come together to create <a href="http://ywebca.org">YWeb Career Academy</a>, a 400 hour education program to teach web development skills targeting young women and people of color who are underrepresented in the technology field. With your help we’ll empower these bright young minds to challenge themselves to improve their lives and the Madison community.
+        %h1= t('brand')
+        %h3= t('hero.subtitle') 
+        %p= t('hero.copy')
 
     .row.short-top
       .content-centered
@@ -43,9 +41,9 @@
               %i.icon-leaf
               %span.collapse Adorable
           %li
-            %a(href="https://twitter.com/search?q=%23HYPEBRR%20OR%20%23whatishypebrr&src=typd")
+            %a(href="#{twitter_link(t('brand'))}")
               %i.icon-twitter
-              %span.collapse #HYPEBRR on Twitter
+              %span.collapse= t('hero.links.twitter.copy')
 #where
 .where
   #where-map
@@ -65,7 +63,7 @@
 .sponsors
   .row
     .content-centered
-      %h5 #HYPEBRR made possible by
+      %h5= "#{t('brand')} made possible by"
       %ul.sponsor-list
         %li
           %a(href="http://www.google.com")

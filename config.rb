@@ -27,6 +27,7 @@ require "zurb-foundation"
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
+activate :i18n
 
 ###
 # Page command
@@ -50,21 +51,6 @@ require "zurb-foundation"
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
 
-###
-# Helpers
-###
-
-# Methods defined in the helpers block are available in templates
-helpers do
-  def portrait
-    image_tag lorem.image('300x300'), :class => "portrait"
-  end
-
-  def gravatar_url_for(email, size=300)
-    hash = Digest::MD5.hexdigest(email)
-    image_tag "http://gravatar.com/avatar/#{hash}?s=#{size}", :class => "portrait"
-  end
-end
 
 # Change the CSS directory
 # set :css_dir, "alternative_css_directory"

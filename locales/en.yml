@@ -1,0 +1,29 @@
+---
+en:
+  brand: "#HYPEBRR"
+  navigation:
+    when_and_where: 'When & Where'
+    musical_guests: 'Musical Guests'
+    speakers: 'Speakers'
+    call_to_action: 'Register'
+
+  hero:
+    copy: |
+      Come join us for a night of food, cocktails, music, games and an amazing
+      list of guest speakers. <a href="http://www.ywcamadison.org">YWCA of
+      Madison</a> and <a href="http://adorable.io">Adorable</a> have come together
+      to create <a href="http://ywebca.org">YWeb Career Academy</a>, a 400 hour
+      education program to teach web development skills targeting young women and
+      people of color who are underrepresented in the technology field. With your
+      help we’ll empower these bright young minds to challenge themselves to
+      improve their lives and the Madison community.
+    subtitle: Educate, Empower, & Employ
+    links:
+      madison:
+        copy: Madison+
+        link: http://www.madisonpl.us/
+      sapling_events:
+        copy: Sapling Events
+        link: http://www.saplingevents.com/
+      twitter:
+        copy: "#HYPEBRR on Twitter"
