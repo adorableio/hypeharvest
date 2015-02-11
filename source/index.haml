@@ -1,51 +1,49 @@
 - content_for :head do
-  %title #HYPEHARVEST
+  %title= t('brand')
 
 .sticky
   .top-bar
     %ul.title-area
       %li.name
         %h1
-          %a(href="#") #HYPEHARVEST
+          %a(href="#")= t('brand')
       %li.toggle-topbar.menu-icon
         %a(href="#!")
           %span Menu
     %section.top-bar-section
       %ul.right
         %li
-          %a(href="#where") When & Where
+          %a(href="#{data.app.navigation_links.when_and_where}")= t('navigation.when_and_where')
         %li
-          %a(href="#sponsors") Sponsors
+          %a(href="#{data.app.navigation_links.musical_guests}")= t('navigation.musical_guests')
         %li
-          %a(href="#music") Musical Guests
-        %li
-          %a(href="#speakers") Speakers
+          %a(href="#{data.app.navigation_links.speakers}")= t('navigation.speakers')
         %li.has-form
-          %a.button.radius(href="http://igg.me/at/hh14/")
-            Donate
+          %a.button.radius(href="#{data.app.navigation_links.call_to_action}")
+            = t('navigation.call_to_action')
 .header
   .wrap
     .row
       .content-centered
-        %h1 #HYPEHARVEST
-        %p
-          <a href="http://madisonpl.us/ruby">Madison+ Ruby</a> has grown a reputation for being <a href="https://twitter.com/search?q=madisonruby">one of the best regional conferences around</a> and as such people just want to be involved. We've built a great event and are now harvesting some of the hype that surrounds it. In usual <a href="http://saplingevents.com/">Sapling Events</a> style it's ... well, you'll see.
+        %h1= t('brand')
+        %h3= t('hero.subtitle') 
+        %p= t('hero.copy')
 
     .row.short-top
       .content-centered
         %ul.small-block-grid-3
           %li
-            %a(href="http://www.madisonpl.us/ruby")
+            %a(href="http://www.ywebca.org")
               %i.icon-ruby
-              %span.collapse Madison+ Ruby Conference
+              %span.collapse YWebCA
           %li
-            %a(href="http://www.saplingevents.com/")
+            %a(href="http://www.adorable.io/")
               %i.icon-leaf
-              %span.collapse Sapling Events
+              %span.collapse Adorable
           %li
-            %a(href="https://twitter.com/search?q=%23HYPEHARVEST%20OR%20%23whatishypeharvest&src=typd")
+            %a(href="#{twitter_link(t('brand'))}")
               %i.icon-twitter
-              %span.collapse #HYPEHARVEST on Twitter
+              %span.collapse= t('hero.links.twitter.copy')
 #where
 .where
   #where-map
@@ -53,105 +51,91 @@
     .content-centered
       %h1 When & Where
       %h2
-        .line.one Thursday, August 21
+        .line.one Friday, February 20
         .line.two from
-        .line.three 7-11 PM
+        .line.three 6:30 - 11 pm
       .row
         .content-centered
-          %p Rooftop Sculpture Garden<br />Madison Museum of Contemporary Art
-          %a.button(href="https://www.google.com/maps/dir//Madison+Museum+of+Contemporary+Art,+227+State+St,+Madison,+WI+53703/@43.074595,-89.389325,17z/data=!4m12!1m3!3m2!1s0x0:0x93f6283ea28831bb!2sMadison+Museum+of+Contemporary+Art!4m7!1m0!1m5!1m1!1s0x880653378c412599:0x93f6283ea28831bb!2m2!1d-89.389325!2d43.074595") Get Directions
+          %p Tripp Commons<br />UW Memorial Union
+          %a.button(href="https://www.google.com/maps/place/Memorial+Union/@43.076251,-89.399754,17z/data=!3m1!4b1!4m2!3m1!1s0x8807accaa0165ae1:0x4001e911ad143b35") Get Directions
 
 #sponsors
 .sponsors
   .row
     .content-centered
-      %h5 #HYPEHARVEST made possible by
+      %h5= "#{t('brand')} made possible by"
       %ul.sponsor-list
         %li
-          %a(href="http://www.wellbe.me/")
-            %img(src="images/people/wellbe.png")
-
-        %li
-          %a(href="http://www.yourmixentertainment.com")
-            %img(src="images/people/yourmix.png")
-
-        %li
-          %a(href="http://mobcraftbeer.com/")
-            %img(src="images/people/mobcraft.png")
+          %a(href="http://www.google.com")
+            %img(src="images/people/google.png")
 
 #music
 .musical-guests
   .row
     .content-centered
       %h1 Musical Guests
-      .row
-        .content-centered
-          %p Musical guests are awesome. We've got em!
 
-      %ul.small-block-grid-2.guest-list
-        %li.madison-music
+      %ul.small-block-grid-1
+        %li.the-hook-up
           %a.hover
             .overlay
               .text
-                17 piece ensemble mixing classical and electronic
-          %h2 Madison Music Makers
-        %li.chants-sound
-          %a.hover
-            .overlay
-              .text
-                Beats & bass with melody & atmosphere
-          %h2 Chants Sound
+                Funk Punk Rock Trio
+          %h2 The Hook Up
 
 #speakers
 .speakers
   .row
     .content-centered
       %h1 Speakers
-      .row
-        .content-centered
-          %p Our speakers will share life experiences, technical stories, and/or tales of success & failure.
       %ul.small-block-grid-2.large-block-grid-3.guest-list
-
-        %li.jen-myers
-          %a.hover
-            .overlay
-              .text
-                Designer/Dev & Instructor
-          %h2 Jen Myers
 
         %li.tonia-brock
           %a.hover
             .overlay
-              .text
-                YWebCA Program Manager
+              .text YWebCA Program Manager
           %h2 Tonia Brock
 
-        %li.steve-klabnik
+        %li.kelly-rauwerdink
           %a.hover
             .overlay
               .text
-                Author, Nomad
-          %h2 Steve Klabnik
+                Artist, Designer, &
+                <br />
+                Jack-of-all-trades
+          %h2 Kelly Rauwerdink
 
-        %li.kim-mik
+        %li.francisco-valdes-jasso
           %a.hover
             .overlay
               .text
-                A startlingly sane crazy-person turned developer.
-          %h2 Kim Mik
+                YWebCA Student
+          %h2
+            Francisco
+            <br />
+            Valdes-Jasso
 
-        %li.pacal-bayley
+        %li.erica-naughton
           %a.hover
             .overlay
               .text
-                DJ, produced for Young Jeezy, 50 Cent, Meek Mill, 2Chainz, Public Enemy
-          %h2 DJ Pain 1
+                YWebCA Student
+          %h2 Erica Naughton
 
-        %li.teri-barr
+        %li.rachel-krinsky
           %a.hover
             .overlay
-              .text Anchor, Writer, Host
-          %h2 Teri Barr
+              .text CEO of YWCA Madison
+          %h2 Rachel Krinsky
+
+        %li.scott-resnick
+          %a.hover
+            .overlay
+              .text
+                Alderman &
+                <br />
+                Candidate for Mayor
+          %h2 Scott Resnick
 
 .footer
   .row

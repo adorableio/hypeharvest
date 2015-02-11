@@ -67,7 +67,7 @@ $body-font-family: "ff-enzo-web", "Helvetica Neue", "Helvetica", Helvetica, Aria
 
 // Colors
 
-$primary-color: $red;
+// $primary-color: $blue;
 // $secondary-color: #e9e9e9;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
@@ -358,7 +358,7 @@ $anchor-font-color-hover: lighten($primary-color, 15%);
 
 // $button-font-family: inherit;
 // $button-font-color: #fff;
-// $button-font-color-alt: #333;
+$button-font-color-alt: $button-font-color;
 // $button-font-med: emCalc(16);
 // $button-font-tny: emCalc(11);
 // $button-font-sml: emCalc(13);

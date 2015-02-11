@@ -3,6 +3,19 @@ $(document).ready(function() {
 
   function initialize() {
 
+    var green = '#94d5bb',
+        white = '#f9f4f2',
+        cream = '#e9e5dc',
+        darkCream = '#e0d9cf',
+        blue = '#91c1f9',
+        lightBlue = '#b7d4f9';
+
+    var water = lightBlue,
+        landscape = cream,
+        poi = cream,
+        road = darkCream,
+        transit = white;
+
     var styles = [
       { featureType: "administrative",
         elementType: "labels",
@@ -15,28 +28,28 @@ $(document).ready(function() {
         stylers: [{ visibility: "off" } ]},
       { featureType: "water",
         elementType: "geometry.fill",
-        stylers: [{ color: "#94d5bb" } ]},
+        stylers: [{ color: water } ]},
       { featureType: "landscape",
         elementType: "labels",
         stylers: [{ visibility: "off" } ]},
       { featureType: "landscape",
         elementType: "geometry.fill",
-        stylers: [{ color: "#e9e5dc" } ]},
+        stylers: [{ color: landscape } ]},
       { featureType: "poi",
          elementType: "geometry.fill",
-         stylers: [{ color: "#e9e5dc" } ]},
+         stylers: [{ color: poi } ]},
       { featureType: "road",
         elementType: "geometry.fill",
-        stylers: [{ color: '#f9f4f2' } ]},
+        stylers: [{ color: white } ]},
       { featureType: "road",
         elementType: "geometry.stroke",
-        stylers: [{ color: "#e0d9cf" } ]},
+        stylers: [{ color: road } ]},
       { featureType: "road",
         elementType: "labels",
         stylers: [{ visibility: "off" } ]},
       { featureType: "transit",
         elementType: "line.fill",
-        stylers: [{ color: '#f9f4f2' } ]}
+        stylers: [{ color: transit } ]}
     ];
 
     var center = new google.maps.LatLng(43.0745, -89.3894);

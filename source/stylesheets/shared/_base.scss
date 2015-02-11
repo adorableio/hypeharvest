@@ -139,7 +139,7 @@ $small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)
     > a:not(.button) {
       &:hover { @extend .shake-side; }
       @extend %boss-portrait;
-      background-image: image-url("people/frank-byrne.jpg") !important;
+      background-image: image-url("people/<INSERT_NAME>.jpg") !important;
       .overlay {
         @extend %boss-portrait;
         .text {
@@ -167,6 +167,8 @@ $small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)
   > a:not(.button) {
     @extend .portrait;
     @include background-size(cover);
+    @include border-radius($global-rounded);
+    background-color: $portrait-background;
     background-image: image-url("#{$image-url}");
     cursor: default;
     display: block;
@@ -179,8 +181,8 @@ $small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)
       @extend .portrait;
       @include transition-property(opacity);
       @include transition-duration(0.3s);
-      background: rgba($blue,.8);
-      color: $white;
+      background: rgba($portrait-background-hover,.8);
+      color: $portrait-text-color-hover;
       display: table;
       font-weight: 600;
       margin: 0 auto;
@@ -231,7 +233,7 @@ a {
   @include transition(all 0.3s ease);
   color: $linky-color;
 
-  &:hover { color: $blue; }
+  &:hover { color: $linky-hover-color; }
 
   &.collapse,
   .collapse {
@@ -245,7 +247,7 @@ a {
   @include bg($black);
   @include background-size(cover);
   @extend %white-text;
-  background-image: image-url('djboom.jpg');
+  background-image: image-url('winter-snow.jpg');
   padding-bottom: 40px;
   padding-top: 80px;
   background-position: center 80%;
@@ -275,14 +277,14 @@ a {
   h1 {
     @include background-size(contain);
     display: block;
-    height: 270px;
+    height: 340px;
     background-image: image-url('header-logo.svg');
     background-repeat: no-repeat;
     background-position: center;
     font-size: emCalc(64px);
     text-indent: -1000%;
-    margin-top: emCalc(10px);
-    margin-bottom: emCalc(10px);
+    margin-top: emCalc(5px);
+    margin-bottom: emCalc(5px);
   }
 
   h2 { color: $white; }
@@ -362,7 +364,7 @@ a {
         margin: 20px auto 10px;
         width: 60px;
         height: 4px;
-        background: $blue;
+        background: $where-hr-color;
         position: relative;
       }
 
@@ -386,7 +388,9 @@ a {
 }
 
 //
-.locked { @include portrait("locked.svg"); }
+.locked {
+  @include portrait("locked.svg");
+}
 
 .musical-guests {
   @extend %section-pad;
@@ -455,8 +459,8 @@ button, .button {
   font-weight: 600;
   margin-bottom: -10px;
   &:hover {
-    background: $blue !important;
-    border-color: $blue;
+    background: $button-hover-color !important;
+    border-color: $button-hover-color;
   }
 
   @media #{$small-up} {
@@ -499,7 +503,7 @@ button, .button {
 
   &.fixed {
     &:before {
-      background-color: rgba($cream, .95);
+      background-color: rgba($nav-fixed-background, .95);
       height: 88px;
     }
 
@@ -520,12 +524,12 @@ button, .button {
     .top-bar.expanded .top-bar-section {
       ul {
         margin-top: 23px;
-        background-color: rgba($cream, .95) !important;
+        background-color: rgba($nav-fixed-background, .95) !important;
       }
     }
 
     .top-bar-section {
-      ul { background-color: rgba($cream, .95); }
+      ul { background-color: rgba($nav-fixed-background, .95); }
       ul > li button,
       ul > li .button {
         color: $black;
@@ -536,7 +540,7 @@ button, .button {
 
   &:before {
     @include transition(height 0.3s ease);
-    background-color: $red;
+    background-color: $primary-color;
     position: absolute;
     content: '';
     display: block;
@@ -558,7 +562,7 @@ button, .button {
     ul > li a {
       border-bottom: 2px solid transparent;
       font-weight: 600;
-      &:hover { border-bottom: 2px solid $red; }
+      &:hover { border-bottom: 2px solid $primary-color; }
     }
 
     ul > li button,
@@ -572,8 +576,8 @@ button, .button {
       padding-right: 20px;
       height: auto;
       &:hover {
-        background-color: $red !important;
-        border-color: $red !important;
+        background-color: $primary-color !important;
+        border-color: $primary-color !important;
         color: $white;
       }
     }

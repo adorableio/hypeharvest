@@ -1,14 +1,34 @@
 $white       : #f9f4f2;
-$black       : #090a14;
+$black       : #202439;
 
 $red         : #f75c50;
 $light-red   : #fb7064;
 $purple      : #a15e95;
 $light-green : #c7e358;
 $green       : #bfd729;
-$blue        : #7dccad;
+$blue        : #91c1f9;
+$light-blue  : #c7dbff;
 $cream       : #f9f4f2;
 $dark-cream  : #e0d9cf;
 
+// general
+$primary-color: $blue;
 
-$linky-color : $light-red;
+// links
+$linky-color: $blue;
+$linky-hover-color: $light-blue;
+
+// button
+$button-font-color: $white;
+$button-hover-color: $light-blue;
+
+// portrait
+$portrait-background: $blue;
+$portrait-background-hover: $light-blue;
+$portrait-text-color-hover: $black;
+
+// where
+$where-hr-color: $primary-color;
+
+// nav
+$nav-fixed-background: $cream;
