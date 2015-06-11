@@ -401,12 +401,13 @@ a {
 
 .speakers {
   @extend %section-pad;
-  @include bg($white);
+  @include bg($black);
+  @extend %white-text;
 }
 
 .footer {
-  @extend %white-text;
-  @include bg($black);
+  // @extend %white-text;
+  @include bg($white);
   padding-top: 1em;
 }
 
