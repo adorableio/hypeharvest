@@ -164,6 +164,12 @@ $small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)
     }
     h3 { color: $white; }
   }
+
+  > .links {
+    @extend ul.no-bullet;
+    margin-left: 0;
+  }
+
   > .hover {
     @extend .portrait;
     @include background-size(cover);
