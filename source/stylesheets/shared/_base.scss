@@ -136,7 +136,7 @@ $small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)
 @mixin portrait($image-url) {
   position: relative;
   &.boss {
-    > a:not(.button) {
+    > .hover {
       &:hover { @extend .shake-side; }
       @extend %boss-portrait;
       background-image: image-url("people/frank-byrne.jpg") !important;
@@ -164,7 +164,7 @@ $small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)
     }
     h3 { color: $white; }
   }
-  > a:not(.button) {
+  > .hover {
     @extend .portrait;
     @include background-size(cover);
     background-image: image-url("#{$image-url}");
@@ -425,8 +425,11 @@ ul.sponsor-list {
   margin-bottom: 0;
   li {
     @include inline-block;
-    margin-right: $column-gutter / 2;
+    margin-right: $column-gutter;
     margin-bottom: 1.5em;
+    img {
+      max-height: 100px;
+    }
   }
 }
 
