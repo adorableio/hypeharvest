@@ -139,7 +139,7 @@ $small-up: "only screen and (min-width: #{$small-screen}) and (max-width: 986px)
     > .hover {
       &:hover { @extend .shake-side; }
       @extend %boss-portrait;
-      background-image: image-url("people/frank-byrne.jpg") !important;
+      background-image: image-url("locked.svg") !important;
       .overlay {
         @extend %boss-portrait;
         .text {
